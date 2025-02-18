@@ -44,7 +44,8 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:19.0.0"],\
           ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
           ["react-router", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.1.5"],\
-          ["vite", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:6.1.0"]\
+          ["vite", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:6.1.0"],\
+          ["zustand", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:5.0.3"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -71,7 +72,8 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:19.0.0"],\
           ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
           ["react-router", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.1.5"],\
-          ["vite", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:6.1.0"]\
+          ["vite", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:6.1.0"],\
+          ["zustand", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:5.0.3"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -4664,6 +4666,36 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/yocto-queue-npm-0.1.0-c6c9a7db29-dceb44c285.zip/node_modules/yocto-queue/",\
         "packageDependencies": [\
           ["yocto-queue", "npm:0.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["zustand", [\
+      ["npm:5.0.3", {\
+        "packageLocation": "./.yarn/cache/zustand-npm-5.0.3-6b60927ae4-dad96c6c12.zip/node_modules/zustand/",\
+        "packageDependencies": [\
+          ["zustand", "npm:5.0.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:5.0.3", {\
+        "packageLocation": "./.yarn/__virtual__/zustand-virtual-03389b13b5/0/cache/zustand-npm-5.0.3-6b60927ae4-dad96c6c12.zip/node_modules/zustand/",\
+        "packageDependencies": [\
+          ["zustand", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:5.0.3"],\
+          ["@types/immer", null],\
+          ["@types/react", "npm:19.0.8"],\
+          ["@types/use-sync-external-store", null],\
+          ["immer", null],\
+          ["react", "npm:19.0.0"],\
+          ["use-sync-external-store", null]\
+        ],\
+        "packagePeers": [\
+          "@types/immer",\
+          "@types/react",\
+          "@types/use-sync-external-store",\
+          "immer",\
+          "react",\
+          "use-sync-external-store"\
         ],\
         "linkType": "HARD"\
       }]\
