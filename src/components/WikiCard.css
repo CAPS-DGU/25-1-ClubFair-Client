@@ -4,12 +4,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  width: 100%;
+  /*width: 100%;*/
   /*height: 108px;*/
   padding: 16px 20px;
   border: 1px solid #F3F3F3;
   border-radius: 8px;
   gap: 5px;
+  background-color: #fff;
 }
 
 
@@ -18,7 +19,7 @@
   justify-content: start;
   gap: 20px;
   align-items: center;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .wiki-card-title {
