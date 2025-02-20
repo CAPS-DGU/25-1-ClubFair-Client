@@ -1,0 +1,128 @@
+.header {
+  background: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 100px;
+}
+
+.nav-menu a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* 컨텐츠 전체 영역 */
+.content {
+  display: flex;
+}
+
+/* 사이드바 */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+/* 대학 버튼 */
+.dept-btn {
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* 하위 학과 목록 */
+.sub-list {
+  margin-left: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: gray;
+  ::before{
+    content: "▢";
+  }
+}
+
+.empty {
+  color: red;
+  font-style: italic;
+}
+
+/* 박스 그리드 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-left: 20px;
+  flex: 1;
+}
+
+.box {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.box.blue {
+  background-image: linear-gradient(to top, #4996D0, #003F6F);
+}
+
+.box.green {
+  background-image: linear-gradient(to top, #97C6B5, #118A60);
+}
+
+.box.empty {
+  background-color: #e5e7eb;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
