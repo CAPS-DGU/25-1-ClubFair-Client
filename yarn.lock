@@ -24,6 +24,7 @@ __metadata:
     lint-staged: "npm:^15.4.3"
     prettier: "npm:^3.5.0"
     react: "npm:^19.0.0"
+    react-device-detect: "npm:^2.2.3"
     react-dom: "npm:^19.0.0"
     react-router: "npm:^7.1.5"
     vite: "npm:^6.1.0"
@@ -3117,6 +3118,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-device-detect@npm:^2.2.3":
+  version: 2.2.3
+  resolution: "react-device-detect@npm:2.2.3"
+  dependencies:
+    ua-parser-js: "npm:^1.0.33"
+  peerDependencies:
+    react: ">= 0.14.0"
+    react-dom: ">= 0.14.0"
+  checksum: 10c0/396bbeeab0cb21da084c67434d204c9cf502fad6c683903313084d3f6487950a36a34f9bf67ccf5c1772a1bb5b79a2a4403fcfe6b51d93877db4c2d9f3a3a925
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:^19.0.0":
   version: 19.0.0
   resolution: "react-dom@npm:19.0.0"
@@ -3845,6 +3858,15 @@ __metadata:
     possible-typed-array-names: "npm:^1.0.0"
     reflect.getprototypeof: "npm:^1.0.6"
   checksum: 10c0/e38f2ae3779584c138a2d8adfa8ecf749f494af3cd3cdafe4e688ce51418c7d2c5c88df1bd6be2bbea099c3f7cea58c02ca02ed438119e91f162a9de23f61295
+  languageName: node
+  linkType: hard
+
+"ua-parser-js@npm:^1.0.33":
+  version: 1.0.40
+  resolution: "ua-parser-js@npm:1.0.40"
+  bin:
+    ua-parser-js: script/cli.js
+  checksum: 10c0/2b6ac642c74323957dae142c31f72287f2420c12dced9603d989b96c132b80232779c429b296d7de4012ef8b64e0d8fadc53c639ef06633ce13d785a78b5be6c
   languageName: node
   linkType: hard
 

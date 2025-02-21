@@ -42,6 +42,7 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:15.4.3"],\
           ["prettier", "npm:3.5.0"],\
           ["react", "npm:19.0.0"],\
+          ["react-device-detect", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:2.2.3"],\
           ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
           ["react-router", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.1.5"],\
           ["vite", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:6.1.0"]\
@@ -69,6 +70,7 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:15.4.3"],\
           ["prettier", "npm:3.5.0"],\
           ["react", "npm:19.0.0"],\
+          ["react-device-detect", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:2.2.3"],\
           ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
           ["react-router", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.1.5"],\
           ["vite", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:6.1.0"]\
@@ -3649,6 +3651,33 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-device-detect", [\
+      ["npm:2.2.3", {\
+        "packageLocation": "./.yarn/cache/react-device-detect-npm-2.2.3-307eab666a-396bbeeab0.zip/node_modules/react-device-detect/",\
+        "packageDependencies": [\
+          ["react-device-detect", "npm:2.2.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:2.2.3", {\
+        "packageLocation": "./.yarn/__virtual__/react-device-detect-virtual-6fe2abe30e/0/cache/react-device-detect-npm-2.2.3-307eab666a-396bbeeab0.zip/node_modules/react-device-detect/",\
+        "packageDependencies": [\
+          ["react-device-detect", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:2.2.3"],\
+          ["@types/react", "npm:19.0.8"],\
+          ["@types/react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.3"],\
+          ["react", "npm:19.0.0"],\
+          ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
+          ["ua-parser-js", "npm:1.0.40"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-dom", [\
       ["npm:19.0.0", {\
         "packageLocation": "./.yarn/cache/react-dom-npm-19.0.0-b7981c573e-a36ce7ab50.zip/node_modules/react-dom/",\
@@ -4400,6 +4429,15 @@ const RAW_RUNTIME_STATE =
           ["is-typed-array", "npm:1.1.15"],\
           ["possible-typed-array-names", "npm:1.1.0"],\
           ["reflect.getprototypeof", "npm:1.0.10"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["ua-parser-js", [\
+      ["npm:1.0.40", {\
+        "packageLocation": "./.yarn/cache/ua-parser-js-npm-1.0.40-325ddb8d64-2b6ac642c7.zip/node_modules/ua-parser-js/",\
+        "packageDependencies": [\
+          ["ua-parser-js", "npm:1.0.40"]\
         ],\
         "linkType": "HARD"\
       }]\
