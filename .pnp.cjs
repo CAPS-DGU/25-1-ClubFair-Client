@@ -3657,8 +3657,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/react-device-detect-virtual-6fe2abe30e/0/cache/react-device-detect-npm-2.2.3-307eab666a-396bbeeab0.zip/node_modules/react-device-detect/",\
         "packageDependencies": [\
           ["react-device-detect", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:2.2.3"],\
-          ["@types/react", "npm:19.0.8"],\
-          ["@types/react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.3"],\
+          ["@types/react", "npm:19.0.10"],\
+          ["@types/react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.4"],\
           ["react", "npm:19.0.0"],\
           ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
           ["ua-parser-js", "npm:1.0.40"]\
