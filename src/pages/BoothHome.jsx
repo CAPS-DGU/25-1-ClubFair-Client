@@ -1,6 +1,5 @@
 import { isMobile } from "react-device-detect";
 import Home from "./Home";
-
 import "/src/pages/BoothHome.css";
 import "./Home.css";
 
@@ -16,7 +15,7 @@ function BoothMobileView() {
           <h1 className="booth-title">CAPS</h1>
           <p className="booth-header-text">만든이</p>
         </header>
-
+    
         <div className="booth-search-box">
           <img
             src="/src/assets/search.svg"
@@ -35,7 +34,7 @@ function BoothMobileView() {
             <p>리스트 &#8594;</p>
           </a>
         </div>
-
+    
         <div className="recent-people">
           <span className="person-tag">윤진수</span>
           <span className="person-tag">방지원</span>
@@ -68,31 +67,32 @@ function BoothMobileView() {
       <div className="booth-recruitment">신입부원 모집 3월 5일 마감!</div>
 
       <footer className="booth-footer">
-        <a>
+
+        <a href="https://dgucaps.kr" target="_blank">
           <img
             className="booth-footer-icon"
-            src="/assets/github.svg"
-            alt="GitHub"
+            src="/src/assets/caps-circle.svg"
+            alt="Caps"
           />
         </a>
-        <a>
+        <a href="https://www.instagram.com/caps_dongguk" target="_blank">
           <img
             className="booth-footer-icon"
-            src="/assets/instagram.svg"
+            src="/src/assets/instagram.svg"
             alt="Instagram"
           />
         </a>
-        <a>
+        <a href="https://github.com/CAPS-DGU" target="_blank">
           <img
             className="booth-footer-icon"
-            src="/assets/email.svg"
-            alt="Email"
+            src="/src/assets/github.svg"
+            alt="Github"
           />
         </a>
-        <a>
+        <a href="http://forms.gle/8GhWeFvh4c72v7vPA" target="_blank">
           <img
             className="booth-footer-icon"
-            src="/assets/apply.svg"
+            src="/src/assets/apply.svg"
             alt="Apply"
           />
         </a>

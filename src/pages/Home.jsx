@@ -1,3 +1,4 @@
+import { isMobile } from "react-device-detect"; // react-device-detect에서 isMobile 불러오기
 import { useState, useEffect } from "react";
 import "./Home.css";
 
@@ -65,7 +66,12 @@ function PublicMobileView() {
   return (
     <div className="mobile-container">
       <div className="home-header">
-        <p>로고</p>
+        <img
+          width="40px"
+          height="40px"
+          src="/src/assets/logo-no-title.svg"
+          alt="Caps"
+        />
         <a src="" target="_blank">
           <p className="header-text">만든이</p>
         </a>
@@ -103,28 +109,28 @@ function PublicMobileView() {
       </div>
       <div className="recruitment">신입부원 모집 3월 5일 마감!</div>
       <footer className="mobile-footer">
-        <a src="" target="_blank">
+        <a href="https://dgucaps.kr" target="_blank">
           <img
             className="footer-icon"
-            src="/src/assets/github.svg"
-            alt="GitHub"
+            src="/src/assets/caps-circle.svg"
+            alt="Caps"
           />
         </a>
-        <a src="" target="_blank">
+        <a href="https://www.instagram.com/caps_dongguk" target="_blank">
           <img
             className="footer-icon"
             src="/src/assets/instagram.svg"
             alt="Instagram"
           />
         </a>
-        <a src="" target="_blank">
+        <a href="https://github.com/CAPS-DGU" target="_blank">
           <img
             className="footer-icon"
-            src="/src/assets/email.svg"
-            alt="EEmail"
+            src="/src/assets/github.svg"
+            alt="GitHub"
           />
         </a>
-        <a src="" target="_blank">
+        <a href="http://forms.gle/8GhWeFvh4c72v7vPA" target="_blank">
           <img
             className="footer-icon"
             src="/src/assets/apply.svg"
