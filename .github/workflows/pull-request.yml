@@ -16,6 +16,9 @@ jobs:
           node-version: 18
           cache: 'yarn'
 
+      - name: Install dependencies
+        run: yarn install --immutable
+
       - name: Run ESLint
         run: yarn lint
 
@@ -30,6 +33,9 @@ jobs:
         with:
           node-version: 18
           cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --immutable
 
       - name: Build project
         run: yarn build
