@@ -1,9 +1,10 @@
-import { isMobile } from "react-device-detect"; // react-device-detect에서 isMobile 불러오기
+import { isMobile } from "react-device-detect";
+import Home from "./Home";
 import "/src/pages/BoothHome.css";
 import "./Home.css";
 
 export default function BoothHome() {
-  return isMobile ? <BoothMobileView /> : alert("잘못된 접근");
+  return isMobile ? <BoothMobileView /> : <Home />;
 }
 
 function BoothMobileView() {
@@ -14,7 +15,7 @@ function BoothMobileView() {
           <h1 className="booth-title">CAPS</h1>
           <p className="booth-header-text">만든이</p>
         </header>
-
+    
         <div className="booth-search-box">
           <img
             src="/src/assets/search.svg"
@@ -33,6 +34,7 @@ function BoothMobileView() {
             <p>리스트 &#8594;</p>
           </a>
         </div>
+    
         <div className="recent-people">
           <span className="person-tag">윤진수</span>
           <span className="person-tag">방지원</span>
@@ -44,10 +46,13 @@ function BoothMobileView() {
       </div>
 
       <div className="booth-add-wiki">
-        <button className="booth-add-wiki-btn">
+        <button
+          className="booth-add-wiki-btn"
+          onClick={() => (window.location.href = "/register-form")}
+        >
           <p>위키 추가하기</p>
           <img
-            src="/src/assets/add-wiki.svg"
+            src="/assets/add-wiki.svg"
             alt="add wiki"
             className="wiki-icon"
           />
@@ -62,6 +67,7 @@ function BoothMobileView() {
       <div className="booth-recruitment">신입부원 모집 3월 5일 마감!</div>
 
       <footer className="booth-footer">
+
         <a href="https://dgucaps.kr" target="_blank">
           <img
             className="booth-footer-icon"

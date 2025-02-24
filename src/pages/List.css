@@ -4,20 +4,9 @@
   border-bottom: 1px solid #ddd;
 }
 
-.header-container {
+.Header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  height: 100px;
-}
-
-.nav-menu a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: black;
 }
 
 .container {
@@ -125,4 +114,42 @@
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media screen and (max-width: 768px) {
+  .pc-view {
+    display: none;
+  }
+  .mobile-view {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .pc-view {
+    display: block;
+  }
+  .mobile-view {
+    display: none;
+  }
+}
+
+.dropdowns{
+  text-align: left;
+  margin-left: 10px;
+}
+
+.list{
+  text-align: auto;
+  color: gray;
+}
+
+.student{
+  color: gray;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.wikicard{
+  margin-left: 20px;
 }
