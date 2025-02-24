@@ -163,7 +163,7 @@ body {
   height: 55px;
   padding: 10px;
   border-radius: 50%;
-  background-color: #ddd;
+  /*background-color: #ddd;*/
   display: flex;
   align-items: center;
   justify-content: center;

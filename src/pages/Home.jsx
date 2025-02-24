@@ -52,7 +52,12 @@ function PublicMobileView() {
   return (
     <div className="mobile-container">
       <div className="home-header">
-        <p>로고</p>
+        <img
+          width="40px"
+          height="40px"
+          src="/src/assets/logo-no-title.svg"
+          alt="Caps"
+        />
         <a src="" target="_blank">
           <p className="header-text">만든이</p>
         </a>
