@@ -1,0 +1,90 @@
+
+/* 공통 입력 필드 그룹 */
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/* 라벨 스타일 */
+label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    text-align: justify;
+    width: 20%;
+    padding-right: 3px;
+    padding-left: 8px;
+    white-space: nowrap;
+}
+
+/* 입력 필드 (input, select) */
+input,
+select {
+    flex-grow: 1;
+    width: auto;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* 이름 + 학번 한 줄 정렬 */
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px; /* ✅ 요소 간 간격 추가 */
+}
+
+/*이름 입력*/
+.input-name input {
+    width: auto; /* ✅ 크기를 size 속성에 맞게 자동 조정 */
+    min-width: 100px; /* ✅ 최소 크기 설정 (너무 작아지는 것 방지) */
+    max-width: 150px; /* ✅ 최대 크기 제한 */
+    flex-grow: 0; /* ✅ 불필요한 확장 방지 */
+    text-align: center;
+}
+
+/* 학번 필드 그룹 */
+.input-student-number {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* ✅ 학번과 select 칸 간격 추가 */
+}
+
+/* 학번 입력 필드 */
+#studentNumber {
+    max-width: 60px; /* ✅ 크기 조정 */
+    flex-grow: 0; /* ✅ 자동 확장 방지 */
+    text-align: center; /* ✅ 숫자 중앙 정렬 */
+    padding: 8px;
+    font-size: 15px;
+}
+
+/* ✅ 학번 select 크기 조정 */
+.input-student-number select {
+    max-width: 80px;
+    flex-grow: 0;
+    padding: 8px;
+}
+
+/* 단과대 & 학과 select 크기 조정 */
+.input-department select {
+    max-width: 180px;
+    flex-grow: 1;
+    font-size: 15px;
+    padding: 10px 10px;
+    margin: 5px 0px;
+}
+
+.input-major select {
+    max-width: 250px;
+    flex-grow: 1;
+    font-size: 15px;
+    padding: 10px 10px;
+}
