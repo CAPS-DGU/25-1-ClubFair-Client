@@ -1,8 +1,20 @@
-import React from "react";
-import { isMobile } from "react-device-detect"; // react-device-detect에서 isMobile 불러오기
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // 768px 이하를 모바일로 간주
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return isMobile ? <PublicMobileView /> : <PcView />;
 }
 
