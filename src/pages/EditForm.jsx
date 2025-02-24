@@ -3,7 +3,6 @@ import CommonForm from "/src/components/CommonForm";
 import "./EditForm.css";
 import back from "/src/assets/back.svg";
 
-// ✅ 기존 데이터를 가져오는 함수 (실제 API 요청으로 대체 가능)
 const fetchDocumentData = async (id) => {
   const mockData = {
     "123": {

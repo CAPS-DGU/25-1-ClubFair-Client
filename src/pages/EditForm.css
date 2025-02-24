@@ -1,12 +1,12 @@
-/* ✅ 헤더 전체를 가로 정렬 */
+/*  헤더 전체를 가로 정렬 */
 .header {
     margin-top: 20px;
     display: flex;
-    align-items: center; /* ✅ 세로 중앙 정렬 */
-    gap: 20px; /* ✅ 이미지와 텍스트 사이 간격 */
+    align-items: center; 
+    gap: 20px;
 }
 
-/* ✅ 뒤로가기 버튼 스타일 */
+/*  뒤로가기 버튼 스타일 */
 .search-bar-back {
     width: 30px;
     height: 25px;
@@ -16,15 +16,15 @@
 }
 
 
-/* ✅ 버튼 컨테이너 - 오른쪽 정렬 */
+/*  버튼 컨테이너 - 오른쪽 정렬 */
 .register-button-container {
     width:100%;
     display: flex;
-    justify-content: flex-end; /* ✅ 오른쪽 정렬 */
+    justify-content: flex-end; 
     margin-top: 10px;
 }
 
-/* ✅ Register 페이지에서만 적용되는 버튼 스타일 */
+/* Register 페이지에서만 적용되는 버튼 스타일 */
 .register-button {
     margin: 0px 20px;
     width: 80px;
@@ -37,14 +37,14 @@
     transition: background-color 0.2s ease-in-out;
 }
 
-/* ✅ 비활성화된 버튼 (클릭 불가) */
+/*  비활성화된 버튼 (클릭 불가) */
 .register-button.disabled {
     background-color: #eee;
     color: #aaa;
     cursor: not-allowed;
 }
 
-/* ✅ 활성화된 버튼 */
+/*  활성화된 버튼 */
 .register-button.active {
     background-color: #007aff;
     color: white;

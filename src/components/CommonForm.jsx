@@ -16,7 +16,7 @@ const CommonForm = ({ formData, handleChange }) => {
           name="content"
           value={formData.content}
           onChange={handleChange}
-          className={formData.content ? "filled" : ""} // ✅ 값이 있으면 "filled" 클래스 적용
+          className={formData.content ? "filled" : ""}
           placeholder="타인에 대한 비방은 삼가해주시기 바랍니다."
         />
       </div>

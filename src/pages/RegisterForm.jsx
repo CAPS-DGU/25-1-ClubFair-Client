@@ -7,14 +7,13 @@ import back from "/src/assets/back.svg";
 const Register = () => {
   const [formData, setFormData] = useState({
     name: "",
-    studentNumber: "25", // ✅ 기본값 명확하게 지정
-    department: "첨단융합대학", // ✅ 기본값 명확하게 지정
-    major: "시스템반도체학부", // ✅ 기본값 명확하게 지정
+    studentNumber: "25", 
+    department: "첨단융합대학",
+    major: "시스템반도체학부", 
     content: "",
     author: "",
   });
 
-  // ✅ 모든 필드가 입력되었는지 확인 (trim()은 input만 적용)
   const isFormComplete = 
     formData.name.trim() !== "" && 
     formData.content.trim() !== "" && 
@@ -41,13 +40,13 @@ const Register = () => {
       </header>
       <CommonForm formData={formData} handleChange={handleChange} />
       
-      {/* ✅ 버튼을 감싸는 `div.button-container` 추가 */}
+    
       <div className="register-button-container">
         <button
           className={`register-button ${isFormComplete ? "active" : "disabled"}`} 
           disabled={!isFormComplete}
           type="submit"
-          onClick={() => window.history.back()} // ✅ 이전 페이지로 이동
+          onClick={() => window.history.back()} 
         >
           완료
         </button>

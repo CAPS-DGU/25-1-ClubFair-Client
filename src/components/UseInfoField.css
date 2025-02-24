@@ -38,15 +38,15 @@ select {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    gap: 10px; /* ✅ 요소 간 간격 추가 */
+    gap: 10px; 
 }
 
 /*이름 입력*/
 .input-name input {
-    width: auto; /* ✅ 크기를 size 속성에 맞게 자동 조정 */
-    min-width: 100px; /* ✅ 최소 크기 설정 (너무 작아지는 것 방지) */
-    max-width: 150px; /* ✅ 최대 크기 제한 */
-    flex-grow: 0; /* ✅ 불필요한 확장 방지 */
+    width: auto; 
+    min-width: 100px; 
+    max-width: 150px; 
+    flex-grow: 0; 
     text-align: center;
 }
 
@@ -54,14 +54,14 @@ select {
 .input-student-number {
     display: flex;
     align-items: center;
-    gap: 15px; /* ✅ 학번과 select 칸 간격 추가 */
+    gap: 15px; 
 }
 
 /* 학번 입력 필드 */
 #studentNumber {
-    max-width: 60px; /* ✅ 크기 조정 */
-    flex-grow: 0; /* ✅ 자동 확장 방지 */
-    text-align: center; /* ✅ 숫자 중앙 정렬 */
+    max-width: 60px;
+    flex-grow: 0; 
+    text-align: center; 
     padding: 8px;
     font-size: 15px;
 }

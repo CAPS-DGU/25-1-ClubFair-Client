@@ -55,10 +55,10 @@ textarea {
 
 /* 내용 입력 시 색 변경 */
 textarea.filled {
-    color: #333; /* ✅ 입력하면 검은색 글씨 */
+    color: #333; 
 }
 textarea::placeholder {
-    color: #aaa; /* ✅ placeholder 회색 */
+    color: #aaa; 
 }
 
 
@@ -72,8 +72,8 @@ textarea::placeholder {
     width: auto;
 }
 .input-author input{
-    min-width: 90px; /* ✅ 최소 크기 설정 (너무 작아지는 것 방지) */
-    max-width: 100px; /* ✅ 최대 크기 제한 */
-    flex-grow: 1; /* ✅ 불필요한 확장 방지 */
+    min-width: 90px; 
+    max-width: 100px; 
+    flex-grow: 1; 
     text-align: center;
 }
