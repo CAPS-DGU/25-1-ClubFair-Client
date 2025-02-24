@@ -225,6 +225,18 @@ body {
     font-size: 0.6rem;
     width: 40%;
   }
+
+  .recruitment::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 80%; 
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #4a90e2 transparent transparent transparent;
+  }
+
   .mobile-footer {
     padding-top: 0px;
     justify-content: space-between;

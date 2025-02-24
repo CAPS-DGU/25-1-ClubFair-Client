@@ -167,6 +167,17 @@
       font-size: 0.8rem;
       width: 45%;
     }
+
+    .booth-recruitment::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 80%; 
+      transform: translateX(-50%);
+      border-width: 10px;
+      border-style: solid;
+      border-color: #4a90e2 transparent transparent transparent;
+    }
     
     .booth-footer {
       display: flex;
