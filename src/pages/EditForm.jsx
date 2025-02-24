@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import CommonForm from "/src/components/CommonForm";
 import "./EditForm.css";
 import back from "/src/assets/back.svg";
 
 const fetchDocumentData = async (id) => {
   const mockData = {
-    "123": {
+    123: {
       id: "123",
       name: "홍길동",
       studentNumber: "24",
@@ -16,7 +16,9 @@ const fetchDocumentData = async (id) => {
     },
   };
 
-  return new Promise((resolve) => setTimeout(() => resolve(mockData[id] || null), 1000));
+  return new Promise((resolve) =>
+    setTimeout(() => resolve(mockData[id] || null), 1000)
+  );
 };
 
 const EditForm = () => {
@@ -24,6 +26,7 @@ const EditForm = () => {
   try {
     queryParams = new URLSearchParams(window.location.search);
   } catch (error) {
+    console.error(error);
     queryParams = null;
   }
 
@@ -84,14 +87,21 @@ const EditForm = () => {
         <a href="/">
           <img className="search-bar-back" src={back} alt="뒤로가기" />
         </a>
-        <h2>{loading ? "위키 수정" : `${formData.name} 위키 수정`}</h2> {/* ✅ 이름이 나오도록 설정 */}
+        <h2>{loading ? "위키 수정" : `${formData.name} 위키 수정`}</h2>{" "}
+        {/* ✅ 이름이 나오도록 설정 */}
       </header>
 
-      {loading ? <p>데이터를 불러오는 중...</p> : <CommonForm formData={formData} handleChange={handleChange} />}
+      {loading ? (
+        <p>데이터를 불러오는 중...</p>
+      ) : (
+        <CommonForm formData={formData} handleChange={handleChange} />
+      )}
 
       <div className="register-button-container">
         <button
-          className={`register-button ${isFormComplete ? "active" : "disabled"}`}
+          className={`register-button ${
+            isFormComplete ? "active" : "disabled"
+          }`}
           disabled={!isFormComplete}
           type="button"
           onClick={handleSubmit}

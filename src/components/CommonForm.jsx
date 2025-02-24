@@ -1,4 +1,3 @@
-import React from "react";
 import UserInfoFields from "./UseInfoField";
 import "./CommonForm.css";
 

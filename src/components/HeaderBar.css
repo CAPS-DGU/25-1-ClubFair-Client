@@ -1,0 +1,21 @@
+.header {
+    background: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 100px;
+  }
+  
+  .nav-menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+  }
