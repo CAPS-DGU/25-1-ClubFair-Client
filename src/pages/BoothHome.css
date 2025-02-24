@@ -1,0 +1,200 @@
+/*부스전용*/
+@media screen and (max-width: 768px) {
+    
+    .booth-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+      text-align: center;
+      width: 100vw;
+      padding: 0px;
+    }
+
+    .booth-black{
+      background-color: #2e2e2e; /* 어두운 배경 */
+      color: white;
+      padding: 20px;
+      padding-bottom: 50px;
+    }
+  
+    /* 부스 헤더 */
+    .booth-header {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+  
+    .booth-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+  
+    .booth-header-text {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  
+    /* 검색창 */
+    .booth-search-icon {
+      position: absolute;
+      top: 110px;
+      left: 30px;
+      width: 30px;
+      height: 25px;
+      color: #aaa;
+    }
+    .booth-search-box {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 600px;
+      height: 45px;
+      border-radius: 25px;
+      padding: 5px 10px;
+      background-color: white;
+      margin: 0px;
+    }
+  
+    .booth-search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 0.9rem;
+      padding: 5px 25px;
+      background: transparent;
+
+      margin: 10px;
+    }
+  
+    /*list*/
+    .booth-home-list{
+      display:flex ;
+      justify-content: space-between;
+      margin: 40px 10px 0px 10px;
+    }
+
+    .booth-home-list a{
+      text-decoration: none;
+      color:rgb(192, 197, 197);
+    }
+
+    .person-tag {
+      background-color: #adcaf7;
+      color:#2e2e2e;
+      padding: 7px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+  
+    /* 위키 추가 버튼 */
+    .booth-add-wiki {
+      position: absolute;
+      top: 340px;
+      background: white;
+      width: 85%;
+      max-width: 600px;
+      height: 100px;
+
+      padding:0px;
+      border-radius: 15px;
+      margin:20px;
+
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    .booth-add-wiki-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: transparent;
+      color: black;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      width: 100%;
+      padding: 20px;
+      cursor: pointer;
+    }
+    .booth-add-wiki-btn p{
+      font-size: 1.3em;
+    }
+  
+    .wiki-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+  
+    /* 동아리 설명 */
+    .booth-desc {
+      font-size: 0.9rem;
+      color: #424247;
+      line-height: 1.5;
+      max-width: 800px;
+      margin: 100px 20px 30px 20px;
+    }
+    
+  
+    /* 모바일 최적화 */
+    .booth-title {
+      font-size: 1.5rem;
+    }
+  
+    .booth-search-box {
+      width: 95%;
+      height: 40px;
+    }
+  
+    .booth-add-wiki {
+      width: 90%;
+    }
+  
+    /*footer*/
+    .booth-recruitment {
+      position:relative;
+      left: 75px;
+      top: 20px;
+      background-color: #4a90e2;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 0.8rem;
+      width: 45%;
+    }
+    
+    .booth-footer {
+      display: flex;
+      gap: 10px;
+      padding: 20px 0px;
+      justify-content: space-between;
+      margin: 15px 60px 30px 60px;
+    }
+    
+    .booth-footer-icon {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      padding: 10px;
+      border-radius: 50%;
+      background-color: #ddd;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      object-fit: fill;
+
+    }
+    .booth-footer-icon img {
+      width: 70%;
+      height: 70%;
+      border-radius: 50%;
+    }
+    
+   
+  }
+  

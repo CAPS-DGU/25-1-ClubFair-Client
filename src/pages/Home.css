@@ -1,0 +1,238 @@
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.home-header {
+  background-color: #dbdada; /* 밝은 회색 */
+  width: 100%;
+  padding: 30px 0;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  text-align: center;
+  width: 100vw;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 50px;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-bottom: 5px;
+}
+
+.home-desc {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin-bottom: 30px;
+}
+
+.home-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  height: 45px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  padding: 10px 20px;
+  background-color: #fff;
+  margin: 20px auto 40px;
+}
+
+.home-search-icon {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  width: 30px;
+  height: 30px;
+  color: #aaa;
+}
+
+.home-search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  padding-top: 5px;
+  padding-left: 40px;
+  background: transparent;
+}
+
+.home-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.home-footer {
+  width: 100%;
+  background-color: #dbdada;
+  padding: 0% 0px; /* 푸터 두께를 더 얇게 설정 */
+  font-size: 0.9rem;
+  color: #666;
+  position: relative; /* 화면 하단에 고정되지 않도록 수정 */
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.home-email strong{
+  display: inline-block;
+  margin-right: 10px;
+}
+.home-address{
+  margin: 0px 10px 0px 0px;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+
+
+
+.recent-people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 0px;
+
+}
+.mobile-home-list{
+  display:flex ;
+  justify-content: space-between;
+  margin: 0px 40px;
+}
+
+.person-tag {
+  background-color: #a7e9fb;
+  padding: 6px 15px;
+  margin: 2px 4px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.recruitment {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-top: 20px;
+  text-align: center;
+  width: 75%;
+}
+
+.mobile-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px;
+}
+
+.footer-icon {
+  width: 55px;
+  height: 55px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon img {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .home-header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    margin-top: 10px;
+    width: 90%;
+  }
+  .home-header a, .mobile-home-list a {
+    text-decoration: none;
+    color:#666;
+  }
+  .home-header a:hover{
+    color: #a5cbf6;
+  }
+
+  .home-title {
+    display: inline-block;
+    margin: 0px;
+    font-size: 2rem;
+    position: relative;
+    top: 30px;
+  }
+  .home-desc{
+    font-size: 0.9em;
+    margin: 50px 30px 20px 30px;
+  }
+  
+
+  
+  /*검색창*/
+ 
+  .home-search-box {
+    width: 80%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .home-search-box input{
+    font-size: 0.9em;
+  }
+  .recruitment {
+    position: relative;
+    left: 190px;
+    top: 40px;
+    font-size: 0.6rem;
+    width: 40%;
+  }
+  .mobile-footer {
+    padding-top: 0px;
+    justify-content: space-between;
+    margin: 60px 10px;
+  }
+  .footer-icon {
+    width: 60px;
+    height: 60px;
+    object-fit:fill;
+  }
+}
