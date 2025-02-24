@@ -62,28 +62,28 @@ function BoothMobileView() {
       <div className="booth-recruitment">신입부원 모집 3월 5일 마감!</div>
 
       <footer className="booth-footer">
-        <a>
+        <a href="https://dgucaps.kr" target="_blank">
           <img
             className="booth-footer-icon"
             src="/src/assets/caps-circle.svg"
             alt="Caps"
           />
         </a>
-        <a>
+        <a href="https://www.instagram.com/caps_dongguk" target="_blank">
           <img
             className="booth-footer-icon"
             src="/src/assets/instagram.svg"
             alt="Instagram"
           />
         </a>
-        <a>
+        <a href="https://github.com/CAPS-DGU" target="_blank">
           <img
             className="booth-footer-icon"
             src="/src/assets/github.svg"
             alt="Github"
           />
         </a>
-        <a>
+        <a href="http://forms.gle/8GhWeFvh4c72v7vPA" target="_blank">
           <img
             className="booth-footer-icon"
             src="/src/assets/apply.svg"

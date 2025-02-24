@@ -95,28 +95,28 @@ function PublicMobileView() {
       </div>
       <div className="recruitment">신입부원 모집 3월 5일 마감!</div>
       <footer className="mobile-footer">
-        <a src="" target="_blank">
+        <a href="https://dgucaps.kr" target="_blank">
           <img
             className="footer-icon"
             src="/src/assets/caps-circle.svg"
             alt="Caps"
           />
         </a>
-        <a src="" target="_blank">
+        <a href="https://www.instagram.com/caps_dongguk" target="_blank">
           <img
             className="footer-icon"
             src="/src/assets/instagram.svg"
             alt="Instagram"
           />
         </a>
-        <a src="" target="_blank">
+        <a href="https://github.com/CAPS-DGU" target="_blank">
           <img
             className="footer-icon"
             src="/src/assets/github.svg"
             alt="GitHub"
           />
         </a>
-        <a src="" target="_blank">
+        <a href="http://forms.gle/8GhWeFvh4c72v7vPA" target="_blank">
           <img
             className="footer-icon"
             src="/src/assets/apply.svg"
