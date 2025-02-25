@@ -1,4 +1,3 @@
-import { isMobile } from "react-device-detect"; // react-device-detect에서 isMobile 불러오기
 import { useState, useEffect } from "react";
 import "./Home.css";
 
