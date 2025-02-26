@@ -3,8 +3,8 @@ import searchIcon from "../assets/search.svg";
 import logo from "../assets/CAPS-black.svg";
 import logoNoTitle from "../assets/logo-no-title.svg";
 import capsCircle from "../assets/caps-circle.svg";
-import instagram from "../assets/instagram.svg";
-import github from "../assets/github.svg";
+import instagram from "../assets/instagram_3x.png";
+import github from "../assets/github_3x.png";
 import apply from "../assets/apply.svg";
 import "./Home.css";
 

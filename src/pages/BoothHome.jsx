@@ -4,8 +4,8 @@ import "/src/pages/BoothHome.css";
 import "./Home.css";
 import searchIcon from "../assets/search.svg";
 import capsCircle from "../assets/caps-circle.svg";
-import instagram from "../assets/instagram.svg";
-import github from "../assets/github.svg";
+import instagram from "../assets/instagram_3x.png";
+import github from "../assets/github_3x.png";
 import apply from "../assets/apply.svg";
 
 export default function BoothHome() {
