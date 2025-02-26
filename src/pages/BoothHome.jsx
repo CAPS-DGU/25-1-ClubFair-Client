@@ -2,6 +2,11 @@ import { isMobile } from "react-device-detect";
 import Home from "./Home";
 import "/src/pages/BoothHome.css";
 import "./Home.css";
+import searchIcon from "../assets/search.svg";
+import capsCircle from "../assets/caps-circle.svg";
+import instagram from "../assets/instagram.svg";
+import github from "../assets/github.svg";
+import apply from "../assets/apply.svg";
 
 export default function BoothHome() {
   return isMobile ? <BoothMobileView /> : <Home />;
@@ -15,13 +20,9 @@ function BoothMobileView() {
           <h1 className="booth-title">CAPS</h1>
           <p className="booth-header-text">만든이</p>
         </header>
-    
+
         <div className="booth-search-box">
-          <img
-            src="/src/assets/search.svg"
-            alt="search"
-            className="booth-search-icon"
-          />
+          <img src={searchIcon} alt="search" className="booth-search-icon" />
           <input
             type="text"
             placeholder="찾고 싶은 인물의 이름을 검색해주세요!"
@@ -34,7 +35,7 @@ function BoothMobileView() {
             <p>리스트 &#8594;</p>
           </a>
         </div>
-    
+
         <div className="recent-people">
           <span className="person-tag">윤진수</span>
           <span className="person-tag">방지원</span>
@@ -67,34 +68,17 @@ function BoothMobileView() {
       <div className="booth-recruitment">신입부원 모집 3월 5일 마감!</div>
 
       <footer className="booth-footer">
-
         <a href="https://dgucaps.kr" target="_blank">
-          <img
-            className="booth-footer-icon"
-            src="/src/assets/caps-circle.svg"
-            alt="Caps"
-          />
+          <img className="booth-footer-icon" src={capsCircle} alt="Caps" />
         </a>
         <a href="https://www.instagram.com/caps_dongguk" target="_blank">
-          <img
-            className="booth-footer-icon"
-            src="/src/assets/instagram.svg"
-            alt="Instagram"
-          />
+          <img className="booth-footer-icon" src={instagram} alt="Instagram" />
         </a>
         <a href="https://github.com/CAPS-DGU" target="_blank">
-          <img
-            className="booth-footer-icon"
-            src="/src/assets/github.svg"
-            alt="Github"
-          />
+          <img className="booth-footer-icon" src={github} alt="Github" />
         </a>
         <a href="http://forms.gle/8GhWeFvh4c72v7vPA" target="_blank">
-          <img
-            className="booth-footer-icon"
-            src="/src/assets/apply.svg"
-            alt="Apply"
-          />
+          <img className="booth-footer-icon" src={apply} alt="Apply" />
         </a>
       </footer>
     </div>
