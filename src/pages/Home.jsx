@@ -34,8 +34,8 @@ function PcView() {
         <p className="home-desc">
           안녕하세요. 동국대학교 프로그래밍 중앙동아리 CAPS입니다. 2025학년도
           상반기 동아리 박람회를 위해 배포한 웹사이트입니다.
-          <br /> 3월 5일부터 9일까지 운영됩니다. &apos;캡스위키&apos;에서 실제
-          사용하는 캡스위키를 동아리 박람회 용도에 맞게 배포했습니다.
+          <br /> 3월 5일에 운영됩니다. &apos;캡스&apos;에서 실제 사용하는
+          캡스위키를 동아리 박람회 용도에 맞게 배포했습니다.
         </p>
         <div className="home-search-box">
           <a>
@@ -73,7 +73,7 @@ function PublicMobileView() {
       <h1 className="home-title">CAPS</h1>
       <p className="home-desc">
         안녕하세요, 프로그래밍 중앙동아리 CAPS입니다.
-        <br /> 동박위키는 실제 캠스에서 사용하는 캡스위키를 동아리 박람회 용도에
+        <br /> 동박위키는 실제 캡스에서 사용하는 캡스위키를 동아리 박람회 용도에
         맞게 변형했습니다.
       </p>
       <div className="home-search-box">

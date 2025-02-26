@@ -61,7 +61,7 @@ function BoothMobileView() {
       </div>
 
       <p className="booth-desc">
-        안녕하세요, 프로그래밍 중앙동아리 CAPS입니다. 동박위키는 실제 캠스에서
+        안녕하세요, 프로그래밍 중앙동아리 CAPS입니다. 동박위키는 실제 캡스에서
         사용하는 캡스위키를 동아리 박람회 용도에 맞게 변형했습니다.
       </p>
 
