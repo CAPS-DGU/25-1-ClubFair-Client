@@ -3,8 +3,8 @@ import "./List.css";
 import HeaderBar from "../components/HeaderBar.jsx";
 import WikiCard from "../components/WikiCard.jsx";
 import { useNavigate } from "react-router-dom";
-import Back from "../assets/back.svg";
 import Departments from "../components/Departments.jsx";
+import BackButton from "../components/BackButton.jsx";
 
 export default function List() {
   const [openDepts, setOpenDepts] = useState({});
@@ -61,9 +61,7 @@ export default function List() {
         <div className="mobile-container">
           <header className="Header">
             <div className="Header-container">
-              <a href="/">
-                <img src={Back} alt="뒤로가기" className="back" />
-              </a>
+              <BackButton navigate={navigate} />
               <div className="list">리스트</div>
             </div>
             <hr></hr>

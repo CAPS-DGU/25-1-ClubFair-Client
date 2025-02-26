@@ -1,15 +1,16 @@
 import "./AboutUs.css";
-import Back from "../assets/back.svg";
+import { useNavigate } from "react-router-dom";
+import BackButton from "../components/BackButton";
 
 export default function AboutUs() {
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className="mobile-container">
         <header className="Header">
           <div className="Header-container">
-            <a href="/">
-              <img src={Back} alt="뒤로가기" className="back"></img>
-            </a>
+            <BackButton navigate={navigate} />
             <div className="about-us">만든이</div>
           </div>
           <hr></hr>

@@ -1,12 +1,14 @@
 import { isMobile } from "react-device-detect";
+import { Link } from "react-router-dom";
 import Home from "./Home";
 import "/src/pages/BoothHome.css";
 import "./Home.css";
 import searchIcon from "../assets/search.svg";
-import capsCircle from "../assets/caps-circle.svg";
-import instagram from "../assets/instagram.svg";
-import github from "../assets/github.svg";
+import capsCircle from "../assets/caps-circle_3x.png";
+import instagram from "../assets/instagram_3x.png";
+import github from "../assets/github_3x.png";
 import apply from "../assets/apply.svg";
+import WikiMiniButton from "../components/WikiMiniButton";
 
 export default function BoothHome() {
   return isMobile ? <BoothMobileView /> : <Home />;
@@ -18,7 +20,9 @@ function BoothMobileView() {
       <div className="booth-black">
         <header className="booth-header">
           <h1 className="booth-title">CAPS</h1>
-          <p className="booth-header-text">만든이</p>
+          <Link to="/about-us">
+            <p className="booth-header-text">만든이</p>
+          </Link>
         </header>
 
         <div className="booth-search-box">
@@ -31,18 +35,19 @@ function BoothMobileView() {
 
         <div className="booth-home-list">
           <p>최근 수정 목록</p>
-          <a href="" target="_blank">
+          <Link to="/list">
             <p>리스트 &#8594;</p>
-          </a>
+          </Link>
         </div>
 
         <div className="recent-people">
-          <span className="person-tag">윤진수</span>
-          <span className="person-tag">방지원</span>
-          <span className="person-tag">신효환</span>
-          <span className="person-tag">안아름</span>
-          <span className="person-tag">안아름</span>
-          <span className="person-tag">안아름</span>
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
         </div>
       </div>
 
@@ -61,7 +66,7 @@ function BoothMobileView() {
       </div>
 
       <p className="booth-desc">
-        안녕하세요, 프로그래밍 중앙동아리 CAPS입니다. 동박위키는 실제 캠스에서
+        안녕하세요, 프로그래밍 중앙동아리 CAPS입니다. 동박위키는 실제 캡스에서
         사용하는 캡스위키를 동아리 박람회 용도에 맞게 변형했습니다.
       </p>
 
