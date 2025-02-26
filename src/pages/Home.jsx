@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import searchIcon from "../assets/search.svg";
 import logo from "../assets/CAPS-black.svg";
 import logoNoTitle from "../assets/logo-no-title.svg";
@@ -7,6 +8,7 @@ import instagram from "../assets/instagram_3x.png";
 import github from "../assets/github_3x.png";
 import apply from "../assets/apply.svg";
 import "./Home.css";
+import WikiMiniButton from "../components/WikiMiniButton";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // 768px 이하를 모바일로 간주
@@ -64,10 +66,12 @@ function PublicMobileView() {
   return (
     <div className="mobile-container">
       <div className="home-header">
-        <img width="40px" height="40px" src={logoNoTitle} alt="Caps" />
-        <a src="" target="_blank">
+        <Link to="/">
+          <img width="40px" height="40px" src={logoNoTitle} alt="Caps" />
+        </Link>
+        <Link to="/about-us">
           <p className="header-text">만든이</p>
-        </a>
+        </Link>
       </div>
 
       <h1 className="home-title">CAPS</h1>
@@ -83,18 +87,18 @@ function PublicMobileView() {
 
       <div className="mobile-home-list">
         <p>최근 수정 목록</p>
-        <a href="" target="_blank">
+        <Link to="/list">
           <p>리스트 &#8594;</p>
-        </a>
+        </Link>
       </div>
       <div className="recent-people">
-        <span className="person-tag">윤진수</span>
-        <span className="person-tag">방지원</span>
-        <span className="person-tag">신효환</span>
-        <span className="person-tag">안아름</span>
-        <span className="person-tag">안아름</span>
-        <span className="person-tag">안아름</span>
-        <span className="person-tag">안아름</span>
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
       </div>
       <div className="recruitment">신입부원 모집 3월 5일 마감!</div>
       <footer className="mobile-footer">
