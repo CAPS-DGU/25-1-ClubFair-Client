@@ -8,6 +8,7 @@ import capsCircle from "../assets/caps-circle.svg";
 import instagram from "../assets/instagram.svg";
 import github from "../assets/github.svg";
 import apply from "../assets/apply.svg";
+import WikiMiniButton from "../components/WikiMiniButton";
 
 export default function BoothHome() {
   return isMobile ? <BoothMobileView /> : <Home />;
@@ -40,12 +41,13 @@ function BoothMobileView() {
         </div>
 
         <div className="recent-people">
-          <span className="person-tag">윤진수</span>
-          <span className="person-tag">방지원</span>
-          <span className="person-tag">신효환</span>
-          <span className="person-tag">안아름</span>
-          <span className="person-tag">안아름</span>
-          <span className="person-tag">안아름</span>
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
+          <WikiMiniButton name="윤진수" />
         </div>
       </div>
 

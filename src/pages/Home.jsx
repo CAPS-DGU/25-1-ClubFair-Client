@@ -8,6 +8,7 @@ import instagram from "../assets/instagram.svg";
 import github from "../assets/github.svg";
 import apply from "../assets/apply.svg";
 import "./Home.css";
+import WikiMiniButton from "../components/WikiMiniButton";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // 768px 이하를 모바일로 간주
@@ -91,13 +92,13 @@ function PublicMobileView() {
         </Link>
       </div>
       <div className="recent-people">
-        <span className="person-tag">윤진수</span>
-        <span className="person-tag">방지원</span>
-        <span className="person-tag">신효환</span>
-        <span className="person-tag">안아름</span>
-        <span className="person-tag">안아름</span>
-        <span className="person-tag">안아름</span>
-        <span className="person-tag">안아름</span>
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
+        <WikiMiniButton name="윤진수" />
       </div>
       <div className="recruitment">신입부원 모집 3월 5일 마감!</div>
       <footer className="mobile-footer">
