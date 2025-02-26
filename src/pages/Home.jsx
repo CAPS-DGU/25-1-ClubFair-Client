@@ -1,4 +1,11 @@
 import { useState, useEffect } from "react";
+import searchIcon from "../assets/search.svg";
+import logo from "../assets/CAPS-black.svg";
+import logoNoTitle from "../assets/logo-no-title.svg";
+import capsCircle from "../assets/caps-circle.svg";
+import instagram from "../assets/instagram.svg";
+import github from "../assets/github.svg";
+import apply from "../assets/apply.svg";
 import "./Home.css";
 
 export default function Home() {
@@ -32,11 +39,7 @@ function PcView() {
         </p>
         <div className="home-search-box">
           <a>
-            <img
-              src="/src/assets/search.svg"
-              alt="search"
-              className="home-search-icon"
-            />
+            <img src={searchIcon} alt="search" className="home-search-icon" />
           </a>
           <input
             type="text"
@@ -45,11 +48,7 @@ function PcView() {
         </div>
       </main>
       <footer className="home-footer">
-        <img
-          className="home-logo"
-          src="/src/assets/CAPS-black.svg"
-          alt="caps-logo"
-        />
+        <img className="home-logo" src={logo} alt="caps-logo" />
         <p className="home-email">
           <strong>대표 이메일</strong> caps@test.com
         </p>
@@ -65,12 +64,7 @@ function PublicMobileView() {
   return (
     <div className="mobile-container">
       <div className="home-header">
-        <img
-          width="40px"
-          height="40px"
-          src="/src/assets/logo-no-title.svg"
-          alt="Caps"
-        />
+        <img width="40px" height="40px" src={logoNoTitle} alt="Caps" />
         <a src="" target="_blank">
           <p className="header-text">만든이</p>
         </a>
@@ -83,11 +77,7 @@ function PublicMobileView() {
         맞게 변형했습니다.
       </p>
       <div className="home-search-box">
-        <img
-          src="/src/assets/search.svg"
-          alt="search"
-          className="home-search-icon"
-        />
+        <img src={searchIcon} alt="search" className="home-search-icon" />
         <input type="text" placeholder="찾고싶은 인물의 이름을 검색해주세요!" />
       </div>
 
@@ -109,32 +99,16 @@ function PublicMobileView() {
       <div className="recruitment">신입부원 모집 3월 5일 마감!</div>
       <footer className="mobile-footer">
         <a href="https://dgucaps.kr" target="_blank">
-          <img
-            className="footer-icon"
-            src="/src/assets/caps-circle.svg"
-            alt="Caps"
-          />
+          <img className="footer-icon" src={capsCircle} alt="Caps" />
         </a>
         <a href="https://www.instagram.com/caps_dongguk" target="_blank">
-          <img
-            className="footer-icon"
-            src="/src/assets/instagram.svg"
-            alt="Instagram"
-          />
+          <img className="footer-icon" src={instagram} alt="Instagram" />
         </a>
         <a href="https://github.com/CAPS-DGU" target="_blank">
-          <img
-            className="footer-icon"
-            src="/src/assets/github.svg"
-            alt="GitHub"
-          />
+          <img className="footer-icon" src={github} alt="GitHub" />
         </a>
         <a href="http://forms.gle/8GhWeFvh4c72v7vPA" target="_blank">
-          <img
-            className="footer-icon"
-            src="/src/assets/apply.svg"
-            alt="AApply"
-          />
+          <img className="footer-icon" src={apply} alt="AApply" />
         </a>
       </footer>
     </div>
