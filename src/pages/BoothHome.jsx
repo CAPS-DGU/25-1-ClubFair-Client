@@ -1,4 +1,5 @@
 import { isMobile } from "react-device-detect";
+import { Link } from "react-router-dom";
 import Home from "./Home";
 import "/src/pages/BoothHome.css";
 import "./Home.css";
@@ -18,7 +19,9 @@ function BoothMobileView() {
       <div className="booth-black">
         <header className="booth-header">
           <h1 className="booth-title">CAPS</h1>
-          <p className="booth-header-text">만든이</p>
+          <Link to="/about-us">
+            <p className="booth-header-text">만든이</p>
+          </Link>
         </header>
 
         <div className="booth-search-box">
@@ -31,9 +34,9 @@ function BoothMobileView() {
 
         <div className="booth-home-list">
           <p>최근 수정 목록</p>
-          <a href="" target="_blank">
+          <Link to="/list">
             <p>리스트 &#8594;</p>
-          </a>
+          </Link>
         </div>
 
         <div className="recent-people">
