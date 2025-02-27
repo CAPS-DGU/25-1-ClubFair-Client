@@ -11,8 +11,7 @@ import Edit from "./pages/EditForm.jsx";
 
 function App() {
   return (
-    <Router>
-      <Routes>
+    <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/booth" element={<BoothHome />} />
       <Route path="/register-form" element={<Register />} />
