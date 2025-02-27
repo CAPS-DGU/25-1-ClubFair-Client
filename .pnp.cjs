@@ -45,6 +45,7 @@ const RAW_RUNTIME_STATE =
           ["react-device-detect", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:2.2.3"],\
           ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
           ["react-router", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.1.5"],\
+          ["react-router-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.2.0"],\
           ["vite", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:6.1.0"]\
         ],\
         "linkType": "SOFT"\
@@ -73,6 +74,7 @@ const RAW_RUNTIME_STATE =
           ["react-device-detect", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:2.2.3"],\
           ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
           ["react-router", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.1.5"],\
+          ["react-router-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.2.0"],\
           ["vite", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:6.1.0"]\
         ],\
         "linkType": "SOFT"\
@@ -3718,6 +3720,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:7.2.0", {\
+        "packageLocation": "./.yarn/cache/react-router-npm-7.2.0-1045772925-eb3fe57405.zip/node_modules/react-router/",\
+        "packageDependencies": [\
+          ["react-router", "npm:7.2.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.1.5", {\
         "packageLocation": "./.yarn/__virtual__/react-router-virtual-bbe65f97c1/0/cache/react-router-npm-7.1.5-9668fa2213-c0013102c7.zip/node_modules/react-router/",\
         "packageDependencies": [\
@@ -3730,6 +3739,54 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
           ["set-cookie-parser", "npm:2.7.1"],\
           ["turbo-stream", "npm:2.4.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:a2b9a2fbe22c54f0ea5958d2fdf3a1016768c6186c461234b0518cafed8370f690014b84732e9cc78a77256ab0518d37fc95f9e10eabbbf9759057f8e8e0b501#npm:7.2.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-router-virtual-13b1dbcf55/0/cache/react-router-npm-7.2.0-1045772925-eb3fe57405.zip/node_modules/react-router/",\
+        "packageDependencies": [\
+          ["react-router", "virtual:a2b9a2fbe22c54f0ea5958d2fdf3a1016768c6186c461234b0518cafed8370f690014b84732e9cc78a77256ab0518d37fc95f9e10eabbbf9759057f8e8e0b501#npm:7.2.0"],\
+          ["@types/cookie", "npm:0.6.0"],\
+          ["@types/react", "npm:19.0.8"],\
+          ["@types/react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.3"],\
+          ["cookie", "npm:1.0.2"],\
+          ["react", "npm:19.0.0"],\
+          ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
+          ["set-cookie-parser", "npm:2.7.1"],\
+          ["turbo-stream", "npm:2.4.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-router-dom", [\
+      ["npm:7.2.0", {\
+        "packageLocation": "./.yarn/cache/react-router-dom-npm-7.2.0-65e477d8a5-b4199ea976.zip/node_modules/react-router-dom/",\
+        "packageDependencies": [\
+          ["react-router-dom", "npm:7.2.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.2.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-router-dom-virtual-a2b9a2fbe2/0/cache/react-router-dom-npm-7.2.0-65e477d8a5-b4199ea976.zip/node_modules/react-router-dom/",\
+        "packageDependencies": [\
+          ["react-router-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.2.0"],\
+          ["@types/react", "npm:19.0.8"],\
+          ["@types/react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.3"],\
+          ["react", "npm:19.0.0"],\
+          ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
+          ["react-router", "virtual:a2b9a2fbe22c54f0ea5958d2fdf3a1016768c6186c461234b0518cafed8370f690014b84732e9cc78a77256ab0518d37fc95f9e10eabbbf9759057f8e8e0b501#npm:7.2.0"]\
         ],\
         "packagePeers": [\
           "@types/react-dom",\

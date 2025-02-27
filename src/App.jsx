@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Home from './pages/Home'
 import BoothHome from "./pages/BoothHome";
@@ -11,7 +11,8 @@ import Edit from './pages/EditForm.jsx'
 
 function App() {
   return (
-    <Routes>
+    <Router>
+      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/booth" element={<BoothHome />} /> 
       <Route path = "/register-form" element={<Register />} />
@@ -23,6 +24,8 @@ function App() {
         <Route path=":title" element={<Wiki />} />
       </Route>
     </Routes>
+    </Router>
+    
   )
 }
 
