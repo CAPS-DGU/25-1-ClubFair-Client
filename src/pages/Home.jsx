@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import "./Home.css";
 
 export default function Home() {
@@ -55,7 +56,7 @@ function PublicMobileView() {
       
       <div className="home-header">
       <p>로고</p>
-      <a src="" target="_blank"><p className="header-text">만든이</p></a>
+      <Link to="/about-us"><p className="header-text">만든이</p></Link>
       </div>
 
       <h1 className="home-title">CAPS</h1>
