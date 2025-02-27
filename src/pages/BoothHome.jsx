@@ -20,9 +20,7 @@ function BoothMobileView() {
       <div className="booth-black">
         <header className="booth-header">
           <h1 className="booth-title">CAPS</h1>
-          <Link to="/about-us">
-            <p className="booth-header-text">만든이</p>
-          </Link>
+          <Link to="/about-us" className="booth-header-text">만든이</Link>
         </header>
 
         <div className="booth-search-box">
