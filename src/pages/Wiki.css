@@ -1,0 +1,26 @@
+.wiki-markdown {
+  padding: 10px 20px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.wiki-markdown img {
+  max-width: 100%;
+}
+
+.wiki-markdown h1 {
+  font-size: 1.5em;
+}
+
+.wiki-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 54px;
+}
+
+.wiki-container {
+  padding: 16px;
+  background-color: #fafafa;
+}
