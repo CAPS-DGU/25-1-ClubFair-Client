@@ -1,10 +1,10 @@
 .search-bar-input {
   /*width: 80%;*/
-  height: 100%;
+  /*height: 100%;*/
   /*padding: 0 10px;*/
   font-size: 20px;
   border: none;
-  border-bottom: 1px solid #efefef;
+  /*border-bottom: 1px solid #efefef;*/
   outline: none;
   flex-grow: 1;
   min-width: 0;
@@ -27,4 +27,12 @@
   padding: 0 10px;
   background-color: #fafafa;
   border-bottom: 1px solid #efefef;
+}
+
+.search-bar-right-botton {
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
 }
