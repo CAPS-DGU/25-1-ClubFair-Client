@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import searchIcon from "../assets/search.svg";
 import logo from "../assets/CAPS-black.svg";
 import logoNoTitle from "../assets/logo-no-title.svg";
@@ -63,6 +63,16 @@ function PcView() {
 }
 
 function PublicMobileView() {
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      navigate(`/search/${query}`);
+    }
+  };
+
   return (
     <div className="mobile-container">
       <div className="home-header">
@@ -82,7 +92,13 @@ function PublicMobileView() {
       </p>
       <div className="home-search-box">
         <img src={searchIcon} alt="search" className="home-search-icon" />
-        <input type="text" placeholder="찾고싶은 인물의 이름을 검색해주세요!" />
+        <input
+          onKeyDown={handleKeyDown}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          type="text"
+          placeholder="찾고싶은 인물의 이름을 검색해주세요!"
+        />
       </div>
 
       <div className="mobile-home-list">
