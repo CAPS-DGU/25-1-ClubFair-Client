@@ -1,0 +1,16 @@
+/*  헤더 전체를 가로 정렬 */
+.header {
+    margin-top: 20px;
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+}
+
+/*  뒤로가기 버튼 스타일 */
+.search-bar-back {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    padding-left: 20px;
+    margin-top: 20px;
+}

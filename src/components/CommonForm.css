@@ -1,0 +1,78 @@
+/* 전체 컨테이너 */
+.container {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+}
+
+
+/* 제목 */
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 구분선 */
+hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+}
+
+/* 내용 입력칸 (textarea) */
+.input-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.input-content label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* textarea 기본 스타일 */
+textarea {
+    width: 90%;
+    height: 160px;
+    resize: none;
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+/* 내용 입력 시 색 변경 */
+textarea.filled {
+    color: #333; 
+}
+textarea::placeholder {
+    color: #aaa; 
+}
+
+
+
+/* 작성자 입력칸 */
+.input-author{
+    margin-top: 20px;
+}
+
+.input-author label{
+    width: auto;
+}
+.input-author input{
+    min-width: 90px; 
+    max-width: 100px; 
+    flex-grow: 1; 
+    text-align: center;
+}
