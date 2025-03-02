@@ -3,7 +3,7 @@ import "./WikiCard.css";
 
 export default function WikiCard({ title, enteredIn, college, department }) {
   return (
-    <Link to={`/wiki/${title}-${enteredIn}-${college}-${department}`}>
+    <Link to={`/wiki/${title}`}>
       <div className="wiki-card">
         <div className="wiki-card-header">
           <div className="wiki-card-title">{title}</div>
