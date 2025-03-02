@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import usePostStore from "../stores/PostStore";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
@@ -7,8 +8,22 @@ import SearchBar from "../components/SearchBar";
 import "./Wiki.css";
 
 export default function Wiki() {
-  const { title } = useParams();
-  const [search, setSearch] = useState(title);
+  const { id } = useParams();
+  const [search, setSearch] = useState("");
+
+  const { post, loading, error, fetchPost } = usePostStore();
+
+  useEffect(() => {
+    fetchPost(id);
+  }, [id]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   const description_markdown = `
 # 마크다운 문법 테스트용 한글 텍스트
@@ -77,9 +92,10 @@ hello()
     <>
       <SearchBar value={search} onChange={(e) => setSearch(e.target.value)} />
       <div className="wiki-container">
-        <div className="wiki-title">{title}</div>
+        <div className="wiki-title">{post.name}</div>
         <div className="wiki-markdown">
           <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+            {post.content}
             {description_markdown}
           </Markdown>
         </div>
