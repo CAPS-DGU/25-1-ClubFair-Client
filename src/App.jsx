@@ -18,7 +18,9 @@ function App() {
       <Route path="/edit/:id" element={<Edit />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/list" element={<List />} />
-      <Route path="search" element={<Search />} />
+      <Route path="/search" element={<Search />}>
+        <Route path=":query" element={<Search />} />
+      </Route>
       <Route path="/wiki">
         <Route path=":title" element={<Wiki />} />
       </Route>

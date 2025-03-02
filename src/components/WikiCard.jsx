@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom";
 import "./WikiCard.css";
 
 export default function WikiCard({ title, enteredIn, college, department }) {
   return (
-    <div className="wiki-card">
-      <div className="wiki-card-header">
-        <div className="wiki-card-title">{title}</div>
-        <div className="wiki-card-desc">{enteredIn}학번</div>
+    <Link to={`/wiki/${title}-${enteredIn}-${college}-${department}`}>
+      <div className="wiki-card">
+        <div className="wiki-card-header">
+          <div className="wiki-card-title">{title}</div>
+          <div className="wiki-card-desc">{enteredIn}학번</div>
+        </div>
+        <div className="wiki-card-desc">{college}</div>
+        <div className="wiki-card-desc">{department}</div>
       </div>
-      <div className="wiki-card-desc">{college}</div>
-      <div className="wiki-card-desc">{department}</div>
-    </div>
+    </Link>
   );
 }

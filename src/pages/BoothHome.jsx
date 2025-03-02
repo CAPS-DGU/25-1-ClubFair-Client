@@ -1,5 +1,6 @@
 import { isMobile } from "react-device-detect";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Home from "./Home";
 import "/src/pages/BoothHome.css";
 import "./Home.css";
@@ -15,18 +16,31 @@ export default function BoothHome() {
 }
 
 function BoothMobileView() {
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
   return (
     <div className="booth-container">
       <div className="booth-black">
         <header className="booth-header">
           <h1 className="booth-title">CAPS</h1>
-          <Link to="/about-us" className="booth-header-text">만든이</Link>
+          <Link to="/about-us" className="booth-header-text">
+            만든이
+          </Link>
         </header>
 
         <div className="booth-search-box">
           <img src={searchIcon} alt="search" className="booth-search-icon" />
           <input
             type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                navigate(`/search/${query}`);
+              }
+            }}
             placeholder="찾고 싶은 인물의 이름을 검색해주세요!"
           />
         </div>
