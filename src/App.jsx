@@ -23,7 +23,7 @@ function App() {
         <Route path=":query" element={<Search />} />
       </Route>
       <Route path="/wiki">
-        <Route path=":title" element={<Wiki />} />
+        <Route path=":id" element={<Wiki />} />
       </Route>
       <Route path="/login" element={<Login/>}/>
     </Routes>

@@ -15,11 +15,12 @@ export default function Login() {
     try {
         const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/sign-in`,formData, {
             headers: { "Content-Type": "multipart/form-data" },
+            withCredentials: true
         });
 
         console.log(response);
   
-        if (response.data.success) {
+        if (response.ok) {
           alert("로그인 성공!");
         } else {
           alert("로그인 실패: " + response.data.message);
