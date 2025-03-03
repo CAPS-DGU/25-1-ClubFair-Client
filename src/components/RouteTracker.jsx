@@ -6,8 +6,8 @@ export default function RouteTracker() {
   const location = useLocation();
 
   useEffect(() => {
+    console.log("[PageTracker] 실행됨:", location.pathname);
     if (ReactGA.isInitialized) {
-      console.log("[PageTracker] 실행됨:", location.pathname);
       ReactGA.send({ hitType: "pageview", page: location.pathname });
     }
   }, [location]);
