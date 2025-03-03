@@ -7,6 +7,7 @@ import capsCircle from "../assets/caps-circle_3x.png";
 import instagram from "../assets/instagram_3x.png";
 import github from "../assets/github_3x.png";
 import apply from "../assets/apply.svg";
+import randomIcon from "../assets/random.svg";
 import "./Home.css";
 import WikiMiniButton from "../components/WikiMiniButton";
 import { EventTrigger } from "../utils/gatriggers";
@@ -168,6 +169,12 @@ function PublicMobileView() {
           onChange={(e) => setQuery(e.target.value)}
           type="text"
           placeholder="찾고싶은 인물의 이름을 검색해주세요!"
+        />
+        <img
+          src={randomIcon}
+          alt="random"
+          className="home-random-icon"
+          onClick={() => navigate("/random")}
         />
       </div>
 

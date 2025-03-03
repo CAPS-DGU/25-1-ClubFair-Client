@@ -6,6 +6,7 @@ import capsCircle from "../assets/caps-circle_3x.png";
 import instagram from "../assets/instagram_3x.png";
 import github from "../assets/github_3x.png";
 import apply from "../assets/apply.svg";
+import randomIcon from "../assets/random.svg";
 import WikiMiniButton from "../components/WikiMiniButton";
 import { getCookie } from "../utils/cookie";
 import Home from "./Home"; // ✅ PC 화면에서는 기존 Home 사용
@@ -117,6 +118,12 @@ function BoothMobileView({ recentPeople, setRecentPeople }) {
             onKeyDown={handleKeyDown}
             placeholder="찾고 싶은 인물의 이름을 검색해주세요!"
           />
+          <img
+            src={randomIcon}
+            alt="random"
+            className="booth-random-icon"
+            onClick={() => navigate("/random")}
+          />
         </div>
 
         <div className="booth-home-list">
@@ -144,11 +151,11 @@ function BoothMobileView({ recentPeople, setRecentPeople }) {
           onClick={() => (window.location.href = "/register-form")}
         >
           <p>위키 추가하기</p>
-          <img
-            src="/assets/add-wiki.svg"
-            alt="add wiki"
-            className="wiki-icon"
-          />
+          {/* <img */}
+          {/*   src="/assets/add-wiki.svg" */}
+          {/*   alt="add wiki" */}
+          {/*   className="wiki-icon" */}
+          {/* /> */}
         </button>
       </div>
 

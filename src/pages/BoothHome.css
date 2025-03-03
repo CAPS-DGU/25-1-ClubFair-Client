@@ -59,6 +59,15 @@
       background-color: white;
       margin: 10px;
     }
+
+    .booth-random-icon {
+      position: absolute;
+      top: 120px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      color: #000;
+    }
   
     .booth-search-box input {
       flex: 1;
