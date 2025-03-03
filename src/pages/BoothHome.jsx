@@ -7,7 +7,7 @@ import instagram from "../assets/instagram_3x.png";
 import github from "../assets/github_3x.png";
 import apply from "../assets/apply.svg";
 import WikiMiniButton from "../components/WikiMiniButton";
-import { CheckLogin } from "../utils/cookie";
+import { getCookie } from "../utils/cookie";
 import Home from "./Home"; // ✅ PC 화면에서는 기존 Home 사용
 import "./BoothHome.css";
 
@@ -42,10 +42,10 @@ function BoothMobileView({ recentPeople }) {
 
 
   useEffect(() => {
-    if (CheckLogin) {
-      navigate('/login');  // 로그인 페이지로 리다이렉트
+    if (getCookie("access_token") === undefined) {
+      navigate("/login");
     }
-  }, [navigate]);
+  }, []);
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
