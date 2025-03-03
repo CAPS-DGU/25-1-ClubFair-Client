@@ -110,7 +110,7 @@ function PublicMobileView() {
           setErrorMessage(response.data.message); // 오류 메시지 저장
           alert(errorMessage);
         } else {
-          setRecentPeople(response.data.result.modifiedWikiList || []); // 정상 데이터 저장
+          setRecentPeople(response.data.result.wikiModifiedList || []); // 정상 데이터 저장
           setErrorMessage("");
         }
       } catch (error) {
