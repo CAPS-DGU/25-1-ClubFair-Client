@@ -10,6 +10,7 @@ import apply from "../assets/apply.svg";
 import "./Home.css";
 import WikiMiniButton from "../components/WikiMiniButton";
 import { EventTrigger } from "../utils/gatriggers";
+import axios from "axios";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // 768px 이하를 모바일로 간주
@@ -37,12 +38,12 @@ function PcView() {
     navigate(`/search?name=${query}`); // ✅ 검색 페이지로 이동
   };
   const handleKeyDown = (event) => {
-    if (event.key === "Enter") { // ✅ Enter 키 입력 시 검색 실행
+    if (event.key === "Enter") {
+      // ✅ Enter 키 입력 시 검색 실행
       event.preventDefault();
       handleSearch();
     }
   };
-
 
   return (
     <div className="home-container">
@@ -62,7 +63,7 @@ function PcView() {
             className="home-search-icon"
             onClick={handleSearch} // ✅ 아이콘 클릭 시 검색 실행
             style={{ cursor: "pointer" }} // 버튼처럼 동작하도록 변경
-            />          
+          />
           <input
             type="text"
             placeholder="찾고싶은 인물의 이름을 검색해주세요!"
@@ -88,8 +89,8 @@ function PcView() {
 function PublicMobileView() {
   const [query, setQuery] = useState("");
   const [recentPeople, setRecentPeople] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
-  
 
   useEffect(() => {
     const fetchRecentWikis = async () => {
@@ -101,10 +102,13 @@ function PublicMobileView() {
         console.log("API 응답:", response.data);
 
         if (response.data.errorCode) {
-          
-          console.warn("최근 수정된 목록 불러오기 실패:", response.data.message);
+          console.warn(
+            "최근 수정된 목록 불러오기 실패:",
+            response.data.message
+          );
           setRecentPeople([]); // 최근 목록 초기화
           setErrorMessage(response.data.message); // 오류 메시지 저장
+          alert(errorMessage);
         } else {
           setRecentPeople(response.data.result.modifiedWikiList || []); // 정상 데이터 저장
           setErrorMessage("");
@@ -113,6 +117,7 @@ function PublicMobileView() {
         console.error("최근 수정된 위키 불러오기 실패:", error);
         setRecentPeople([]);
         setErrorMessage("최근 수정된 위키를 불러오는 중 오류가 발생했습니다."); // 네트워크 오류 메시지
+        alert(errorMessage);
       }
     };
 
@@ -177,7 +182,7 @@ function PublicMobileView() {
       <div className="recent-people">
         {recentPeople.length > 0 ? (
           recentPeople.map((wiki) => (
-            <WikiMiniButton key={wiki.id} name={wiki.name} />
+            <WikiMiniButton key={wiki.id} name={wiki.name} id={wiki.id} />
           ))
         ) : (
           <p>최근 수정된 인물이 없습니다.</p>

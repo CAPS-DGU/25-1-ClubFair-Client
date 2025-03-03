@@ -8,15 +8,16 @@ const usePostListStore = create((set) => ({
   searchPosts: async (query, page = 1) => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/wiki?page=${page}&name=${query}`
+        `${
+          import.meta.env.VITE_API_URL
+        }/api/wiki/public?page=${page}&name=${query}`
       );
 
       const data = response.data;
 
       if (data.errorCode) {
-      
         console.warn("검색 실패:", data.message);
-        set({ posts: [], errorMessage: data.message }); 
+        set({ posts: [], errorMessage: data.message });
       } else {
         set({ posts: data.result.wikiList, errorMessage: "" });
       }

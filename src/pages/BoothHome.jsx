@@ -26,20 +26,25 @@ export default function BoothHome() {
     };
   }, []);
 
-
-  return isMobile ? <BoothMobileView recentPeople={recentPeople} /> : <Home />;
+  return isMobile ? (
+    <BoothMobileView
+      recentPeople={recentPeople}
+      setRecentPeople={setRecentPeople}
+    />
+  ) : (
+    <Home />
+  );
 }
 
-function BoothMobileView({ recentPeople }) {
+function BoothMobileView({ recentPeople, setRecentPeople }) {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
-  const [errorMessage, setErrorMessage] = useState(""); 
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSearch = () => {
     if (query.trim() === "") return;
     navigate(`/search?name=${encodeURIComponent(query)}`);
   };
-
 
   useEffect(() => {
     if (getCookie("access_token") === undefined) {
@@ -65,10 +70,13 @@ function BoothMobileView({ recentPeople }) {
         console.log("✅ API 응답:", response.data);
 
         if (response.data.errorCode) {
-          
-          console.warn("최근 수정된 목록 불러오기 실패:", response.data.message);
+          console.warn(
+            "최근 수정된 목록 불러오기 실패:",
+            response.data.message
+          );
           setRecentPeople([]); // 최근 목록 초기화
           setErrorMessage(response.data.message); // 오류 메시지 저장
+          alert(errorMessage);
         } else {
           setRecentPeople(response.data.result.modifiedWikiList || []); // 정상 데이터 저장
           setErrorMessage("");
@@ -77,6 +85,7 @@ function BoothMobileView({ recentPeople }) {
         console.error("최근 수정된 위키 불러오기 실패:", error);
         setRecentPeople([]);
         setErrorMessage("최근 수정된 위키를 불러오는 중 오류가 발생했습니다."); // 네트워크 오류 메시지
+        alert(errorMessage);
       }
     };
 
@@ -93,7 +102,6 @@ function BoothMobileView({ recentPeople }) {
           </Link>
         </header>
 
-        
         <div className="booth-search-box">
           <img
             src={searchIcon}
@@ -122,7 +130,7 @@ function BoothMobileView({ recentPeople }) {
         <div className="recent-people">
           {recentPeople.length > 0 ? (
             recentPeople.map((wiki) => (
-              <WikiMiniButton key={wiki.id} name={wiki.name} />
+              <WikiMiniButton key={wiki.id} name={wiki.name} id={wiki.id} />
             ))
           ) : (
             <p>최근 수정된 인물이 없습니다.</p> // ✅ API 응답이 없을 때 대비
