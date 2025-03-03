@@ -92,10 +92,10 @@ hello()
     <>
       <SearchBar value={search} onChange={(e) => setSearch(e.target.value)} />
       <div className="wiki-container">
-        <div className="wiki-title">{post.name}</div>
+        {/* <div className="wiki-title">{post.name}</div> */}
+        <div className="wiki-title">{id}</div>
         <div className="wiki-markdown">
           <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
-            {post.content}
             {description_markdown}
           </Markdown>
         </div>

@@ -8,6 +8,7 @@ import Search from "./pages/Search";
 import Wiki from "./pages/Wiki";
 import Register from "./pages/RegisterForm.jsx";
 import Edit from "./pages/EditForm.jsx";
+import Login from "./pages/Login.jsx";
 
 function App() {
   return (
@@ -22,8 +23,9 @@ function App() {
         <Route path=":query" element={<Search />} />
       </Route>
       <Route path="/wiki">
-        <Route path=":title" element={<Wiki />} />
+        <Route path=":id" element={<Wiki />} />
       </Route>
+      <Route path="/login" element={<Login/>}/>
     </Routes>
   );
 }
