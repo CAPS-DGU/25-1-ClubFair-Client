@@ -43,6 +43,7 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:15.4.3"],\
           ["prettier", "npm:3.5.1"],\
           ["react", "npm:19.0.0"],\
+          ["react-cookie", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.2.2"],\
           ["react-device-detect", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:2.2.3"],\
           ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
           ["react-markdown", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:10.0.0"],\
@@ -78,6 +79,7 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:15.4.3"],\
           ["prettier", "npm:3.5.1"],\
           ["react", "npm:19.0.0"],\
+          ["react-cookie", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.2.2"],\
           ["react-device-detect", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:2.2.3"],\
           ["react-dom", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:19.0.0"],\
           ["react-markdown", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:10.0.0"],\
@@ -1249,6 +1251,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/hoist-non-react-statics", [\
+      ["npm:3.3.6", {\
+        "packageLocation": "./.yarn/cache/@types-hoist-non-react-statics-npm-3.3.6-62547ea2dd-149a4c217d.zip/node_modules/@types/hoist-non-react-statics/",\
+        "packageDependencies": [\
+          ["@types/hoist-non-react-statics", "npm:3.3.6"],\
+          ["@types/react", "npm:19.0.10"],\
+          ["hoist-non-react-statics", "npm:3.3.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/json-schema", [\
       ["npm:7.0.15", {\
         "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.15-fd16381786-a996a745e6.zip/node_modules/@types/json-schema/",\
@@ -1927,6 +1940,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["cookie", [\
+      ["npm:0.7.2", {\
+        "packageLocation": "./.yarn/cache/cookie-npm-0.7.2-6ea9ee4231-9596e8ccdb.zip/node_modules/cookie/",\
+        "packageDependencies": [\
+          ["cookie", "npm:0.7.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:1.0.2", {\
         "packageLocation": "./.yarn/cache/cookie-npm-1.0.2-7a4273d897-fd25fe79e8.zip/node_modules/cookie/",\
         "packageDependencies": [\
@@ -5319,6 +5339,31 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-cookie", [\
+      ["npm:7.2.2", {\
+        "packageLocation": "./.yarn/cache/react-cookie-npm-7.2.2-61248cf180-22948a42b9.zip/node_modules/react-cookie/",\
+        "packageDependencies": [\
+          ["react-cookie", "npm:7.2.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.2.2", {\
+        "packageLocation": "./.yarn/__virtual__/react-cookie-virtual-1bd682303d/0/cache/react-cookie-npm-7.2.2-61248cf180-22948a42b9.zip/node_modules/react-cookie/",\
+        "packageDependencies": [\
+          ["react-cookie", "virtual:461e6af943b16da7f236f1e34be6e26223630ff89cd394ee5e389acdbb4b9127bfcb7f2ab83e187a9cb14aa7615ae5b0603b19b0bd8a93e8112d4d072c80e438#npm:7.2.2"],\
+          ["@types/hoist-non-react-statics", "npm:3.3.6"],\
+          ["@types/react", "npm:19.0.10"],\
+          ["hoist-non-react-statics", "npm:3.3.2"],\
+          ["react", "npm:19.0.0"],\
+          ["universal-cookie", "npm:7.2.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-device-detect", [\
       ["npm:2.2.3", {\
         "packageLocation": "./.yarn/cache/react-device-detect-npm-2.2.3-307eab666a-396bbeeab0.zip/node_modules/react-device-detect/",\
@@ -6484,6 +6529,17 @@ const RAW_RUNTIME_STATE =
           ["unist-util-visit-parents", "npm:6.0.1"],\
           ["@types/unist", "npm:3.0.3"],\
           ["unist-util-is", "npm:6.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["universal-cookie", [\
+      ["npm:7.2.2", {\
+        "packageLocation": "./.yarn/cache/universal-cookie-npm-7.2.2-c7f1748d18-214c5cf72b.zip/node_modules/universal-cookie/",\
+        "packageDependencies": [\
+          ["universal-cookie", "npm:7.2.2"],\
+          ["@types/cookie", "npm:0.6.0"],\
+          ["cookie", "npm:0.7.2"]\
         ],\
         "linkType": "HARD"\
       }]\
