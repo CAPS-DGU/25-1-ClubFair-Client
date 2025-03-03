@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useSearchParams, useNavigate, Link } from "react-router-dom";
 import usePostListStore from "../stores/PostListStore";
 import SearchBar from "../components/SearchBar";
 import WikiCard from "../components/WikiCard";
@@ -48,7 +48,10 @@ export default function Search() {
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       {posts.length === 0 && !errorMessage ? (
-        <p>검색 결과가 없습니다.</p>
+        <div>
+          <p>검색 결과가 없습니다.</p>
+          <Link to="/register-form">새로운 인물 등록하기↗</Link>
+        </div>
       ) : (
         <div className="search-card-container">
           {posts.map((wiki) => (

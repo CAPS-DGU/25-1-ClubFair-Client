@@ -71,6 +71,15 @@ body {
   color: #aaa;
 }
 
+.home-random-icon {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  width: 30px;
+  height: 30px;
+  color: #aaa;
+}
+
 .home-search-box input {
   width: 100%;
   border: none;

@@ -9,6 +9,7 @@ import Wiki from "./pages/Wiki";
 import Register from "./pages/RegisterForm.jsx";
 import Edit from "./pages/EditForm.jsx";
 import Login from "./pages/Login.jsx";
+import RandomWiki from "./pages/RandomWiki.jsx";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       <Route path="/wiki">
         <Route path=":id" element={<Wiki />} />
       </Route>
-      <Route path="/login" element={<Login/>}/>
+      <Route path="/login" element={<Login />} />
+      <Route path="/random" element={<RandomWiki />} />
     </Routes>
   );
 }

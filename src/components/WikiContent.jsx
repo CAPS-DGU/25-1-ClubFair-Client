@@ -10,8 +10,7 @@ export default function WikiContent({ post }) {
       {/* <div className="wiki-title">{id}</div> */}
       <div className="wiki-markdown">
         <p>
-          {" "}
-          {post.writer}가 {post.modifiedAt}에 수정함{" "}
+          &quot;{post.writer}&quot;이(가) {post.modifiedAt}에 수정함{" "}
         </p>
         <p> {post.college} </p>
         <p> {post.department} </p>

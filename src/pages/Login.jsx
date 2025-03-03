@@ -39,7 +39,7 @@ export default function Login() {
 
   return (
     <div style={styles.container}>
-      <h2>로그인</h2>
+      <h2>부스용 로그인</h2>
       <form onSubmit={handleLogin} style={styles.form}>
         <input
           type="text"
@@ -59,6 +59,7 @@ export default function Login() {
           로그인
         </button>
       </form>
+      <p>문서의 등록, 수정은 부스에서만 가능합니다.</p>
     </div>
   );
 }
