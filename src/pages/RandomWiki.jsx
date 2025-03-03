@@ -1,20 +1,18 @@
-import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import usePostStore from "../stores/PostStore";
 import SearchBar from "../components/SearchBar";
 import "./Wiki.css";
 import WikiContent from "../components/WikiContent";
 
-export default function Wiki() {
-  const { id } = useParams();
+export default function RandomWiki() {
   const [search, setSearch] = useState("");
 
-  const { post, loading, error, fetchPost } = usePostStore();
+  const { post, loading, error, randomPost } = usePostStore();
 
   useEffect(() => {
-    fetchPost(id);
+    randomPost();
     setSearch(post.name);
-  }, [id]);
+  }, []);
 
   if (loading) {
     return <div>Loading...</div>;

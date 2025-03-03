@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 import "./WikiCard.css";
 
-export default function WikiCard({ title, enteredIn, college, department }) {
+export default function WikiCard({
+  id,
+  title,
+  enteredIn,
+  college,
+  department,
+}) {
   return (
-    <Link to={`/wiki/${title}`}>
+    <Link to={`/wiki/${id}`}>
       <div className="wiki-card">
         <div className="wiki-card-header">
           <div className="wiki-card-title">{title}</div>
