@@ -4,7 +4,6 @@ import "./CommonForm.css";
 const CommonForm = ({ formData, handleChange }) => {
   return (
     <div className="container">
-      <hr />
       {/**이름, 학번, 단과대, 학과 */}
       <UserInfoFields formData={formData} handleChange={handleChange} />
       {/* 내용 입력칸 */}
