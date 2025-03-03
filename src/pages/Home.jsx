@@ -9,6 +9,7 @@ import github from "../assets/github_3x.png";
 import apply from "../assets/apply.svg";
 import "./Home.css";
 import WikiMiniButton from "../components/WikiMiniButton";
+import { EventTrigger } from "../utils/gatriggers";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // 768px 이하를 모바일로 간주
@@ -118,16 +119,68 @@ function PublicMobileView() {
       </div>
       <div className="recruitment">신입부원 모집 3월 5일 마감!</div>
       <footer className="mobile-footer">
-        <a href="https://dgucaps.kr" target="_blank">
+        <a
+          href="https://dgucaps.kr"
+          target="_blank"
+          onClick={(e) => {
+            e.preventDefault();
+            EventTrigger({
+              action: "click",
+              category: "OutBound",
+              label: "https://dgucaps.kr",
+              value: 1,
+            });
+            window.open("https://dgucaps.kr");
+          }}
+        >
           <img className="footer-icon" src={capsCircle} alt="Caps" />
         </a>
-        <a href="https://www.instagram.com/caps_dongguk" target="_blank">
+        <a
+          href="https://www.instagram.com/caps_dongguk"
+          target="_blank"
+          onClick={(e) => {
+            e.preventDefault();
+            EventTrigger({
+              action: "click",
+              category: "OutBound",
+              label: "https://www.instagram.com/caps_dongguk",
+              value: 1,
+            });
+            window.open("https://www.instagram.com/caps_dongguk");
+          }}
+        >
           <img className="footer-icon" src={instagram} alt="Instagram" />
         </a>
-        <a href="https://github.com/CAPS-DGU" target="_blank">
+        <a
+          href="https://github.com/caps-dgu"
+          target="_blank"
+          onClick={(e) => {
+            e.preventDefault();
+            EventTrigger({
+              action: "click",
+              category: "OutBound",
+              label: "https://github.com/caps-dgu",
+              value: 1,
+            });
+            window.open("https://github.com/caps-dgu");
+          }}
+        >
           <img className="footer-icon" src={github} alt="GitHub" />
         </a>
-        <a href="http://forms.gle/8GhWeFvh4c72v7vPA" target="_blank">
+        <a
+          href="http://forms.gle/8GhWeFvh4c72v7vPA"
+          target="_blank"
+          onClick={(e) => {
+            e.preventDefault();
+            EventTrigger({
+              action: "click",
+              category: "OutBound",
+              label: "http://forms.gle/8GhWeFvh4c72v7vPA",
+              value: 1,
+            });
+            window.open("http://forms.gle/8GhWeFvh4c72v7vPA");
+          }}
+        >
           <img className="footer-icon" src={apply} alt="AApply" />
         </a>
       </footer>
