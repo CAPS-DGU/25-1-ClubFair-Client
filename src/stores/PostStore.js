@@ -29,6 +29,19 @@ const usePostStore = create((set) => ({
       set({ error, loading: false });
     }
   },
+  randomPost: async () => {
+    set({ loading: true, error: null });
+    try {
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/wiki/random`
+      );
+      const { data } = response;
+      const { result } = data;
+      set({ post: result, loading: false });
+    } catch (error) {
+      set({ error, loading: false });
+    }
+  },
   createPost: async (post) => {
     set({ loading: true, error: null });
     try {

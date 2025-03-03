@@ -1,0 +1,65 @@
+.wiki-markdown {
+  padding: 10px 20px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.wiki-markdown img {
+  max-width: 100%;
+}
+
+.wiki-markdown h1 {
+  font-size: 1.5em;
+}
+
+.wiki-markdown blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: #777;
+  border-left: 0.25em solid #ddd;
+}
+
+.wiki-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 16px;
+
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.wiki-markdown pre {
+  margin: 0;
+  padding: 16px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.wiki-markdown code {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9em;
+  background-color: #f8f8f8;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.wiki-markdown input {
+  width: 20px;
+}
+
+.wiki-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 54px;
+}
+
+.wiki-container {
+  padding: 16px;
+  background-color: #fafafa;
+}
+

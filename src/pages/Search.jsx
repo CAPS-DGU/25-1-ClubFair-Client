@@ -21,6 +21,7 @@ export default function Search() {
       searchPosts(name, 1);
       setPage(1);
       setHasMore(true);
+      console.log(page, hasMore);
     }
   }, [name]);
 
@@ -43,9 +44,7 @@ export default function Search() {
         onChange={(e) => setSearch(e.target.value)}
         onKeyDown={handleKeyDown}
       />
-      <div className="search-result-info">
-        "{name}" 검색 결과
-      </div>
+      <div className="search-result-info">&quot;{name}&quot; 검색 결과</div>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       {posts.length === 0 && !errorMessage ? (
@@ -55,6 +54,7 @@ export default function Search() {
           {posts.map((wiki) => (
             <WikiCard
               key={wiki.id}
+              id={wiki.id}
               title={wiki.name}
               enteredIn={wiki.entranceYear}
               college={wiki.college}
