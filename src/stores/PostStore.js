@@ -20,7 +20,7 @@ const usePostStore = create((set) => ({
     set({ loading: true, error: null });
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/wiki/${id}`
+        `${import.meta.env.VITE_API_URL}/api/wiki/public/${id}`
       );
       const { data } = response;
       const { result } = data;

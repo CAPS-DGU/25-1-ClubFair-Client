@@ -58,6 +58,7 @@ const Register = () => {
     if (error) {
       alert(`Error: ${error.message}`);
     } else {
+      alert("등록이 완료되었습니다.");
       navigate("/booth");
     }
   };
