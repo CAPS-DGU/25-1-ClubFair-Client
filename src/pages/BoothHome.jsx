@@ -1,5 +1,5 @@
 import { isMobile } from "react-device-detect";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Home from "./Home";
 import "/src/pages/BoothHome.css";
@@ -10,7 +10,7 @@ import instagram from "../assets/instagram_3x.png";
 import github from "../assets/github_3x.png";
 import apply from "../assets/apply.svg";
 import WikiMiniButton from "../components/WikiMiniButton";
-import { CheckLogin } from "../utils/cookie";
+import { getCookie } from "../utils/cookie";
 
 export default function BoothHome() {
   return isMobile ? <BoothMobileView /> : <Home />;
@@ -21,10 +21,10 @@ function BoothMobileView() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (CheckLogin) {
-      navigate('/login');  // 로그인 페이지로 리다이렉트
+    if (getCookie("access_token") === undefined) {
+      navigate("/login");
     }
-  }, [navigate]);
+  }, []);
 
   return (
     <div className="booth-container">
