@@ -38,6 +38,7 @@ const Register = () => {
         </a>
         <h2>새로운 인물 등록</h2>
       </header>
+      
       <CommonForm formData={formData} handleChange={handleChange} />
 
       <div className="register-button-container">

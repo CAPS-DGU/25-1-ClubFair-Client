@@ -15,8 +15,9 @@
     .booth-black{
       background-color: #2e2e2e; /* 어두운 배경 */
       color: white;
+      width: 100%;
       padding: 20px;
-      padding-bottom: 50px;
+      padding-bottom: 60px;
     }
   
     /* 부스 헤더 */
@@ -41,8 +42,8 @@
     /* 검색창 */
     .booth-search-icon {
       position: absolute;
-      top: 110px;
-      left: 30px;
+      top: 120px;
+      left: 20px;
       width: 30px;
       height: 25px;
       color: #aaa;
@@ -51,12 +52,12 @@
       display: flex;
       align-items: center;
       width: 100%;
-      max-width: 600px;
+      max-width: 500px;
       height: 45px;
       border-radius: 25px;
       padding: 5px 10px;
       background-color: white;
-      margin: 0px;
+      margin: 10px;
     }
   
     .booth-search-box input {
@@ -93,13 +94,13 @@
     /* 위키 추가 버튼 */
     .booth-add-wiki {
       position: absolute;
-      top: 340px;
+      top: 325px;
       background: white;
-      width: 85%;
-      max-width: 600px;
-      height: 100px;
+      width: 90%;
+      max-width: 650px;
+      height: 110px;
 
-      padding:0px;
+      padding:px;
       border-radius: 15px;
       margin:20px;
 
