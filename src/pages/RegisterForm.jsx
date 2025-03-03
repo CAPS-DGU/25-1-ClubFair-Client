@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CommonForm from "/src/components/CommonForm";
 import "./RegisterForm.css";
-
+import usePostStore from "../stores/PostStore";
+import { useNavigate } from "react-router-dom";
 import back from "/src/assets/back.svg";
+import { getCookie } from "../utils/cookie";
 
 const Register = () => {
+  const { loading, createPost } = usePostStore();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     studentNumber: "25",
@@ -13,6 +17,12 @@ const Register = () => {
     content: "",
     author: "",
   });
+
+  useEffect(() => {
+    if (getCookie("access_token") === undefined) {
+      navigate("/login");
+    }
+  }, []);
 
   const isFormComplete =
     formData.name.trim() !== "" &&
@@ -30,6 +40,28 @@ const Register = () => {
     }));
   };
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  const handleSubmit = async () => {
+    const post = {
+      name: formData.name,
+      entranceYear: formData.studentNumber,
+      department: formData.major,
+      content: formData.content,
+      writer: formData.author,
+    };
+
+    const { error } = await createPost(post);
+
+    if (error) {
+      alert(`Error: ${error.message}`);
+    } else {
+      navigate("/booth");
+    }
+  };
+
   return (
     <div>
       <header className="header">
@@ -38,7 +70,7 @@ const Register = () => {
         </a>
         <h2>새로운 인물 등록</h2>
       </header>
-      
+
       <CommonForm formData={formData} handleChange={handleChange} />
 
       <div className="register-button-container">
@@ -48,7 +80,7 @@ const Register = () => {
           }`}
           disabled={!isFormComplete}
           type="submit"
-          onClick={() => window.history.back()}
+          onClick={handleSubmit}
         >
           완료
         </button>
