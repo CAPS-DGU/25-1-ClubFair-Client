@@ -16,7 +16,7 @@ export const removeCookie = (name)=>{
 }
 
 export const CheckLogin = () => {
-    if(getCookie('accessToken') && getCookie('accessToken') !== "undefined"){
+    if(getCookie('access_token') && getCookie('access_token') !== "undefined"){
       return true;
     }else{
       return false;

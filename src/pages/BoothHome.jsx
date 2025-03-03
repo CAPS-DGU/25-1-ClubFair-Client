@@ -10,6 +10,7 @@ import instagram from "../assets/instagram_3x.png";
 import github from "../assets/github_3x.png";
 import apply from "../assets/apply.svg";
 import WikiMiniButton from "../components/WikiMiniButton";
+import { CheckLogin } from "../utils/cookie";
 
 export default function BoothHome() {
   return isMobile ? <BoothMobileView /> : <Home />;
@@ -18,6 +19,12 @@ export default function BoothHome() {
 function BoothMobileView() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (CheckLogin) {
+      navigate('/login');  // 로그인 페이지로 리다이렉트
+    }
+  }, [navigate]);
 
   return (
     <div className="booth-container">
