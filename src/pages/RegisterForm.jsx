@@ -3,7 +3,7 @@ import CommonForm from "/src/components/CommonForm";
 import "./RegisterForm.css";
 import usePostStore from "../stores/PostStore";
 import { useNavigate } from "react-router-dom";
-import back from "/src/assets/back.svg";
+import BackButton from "../components/BackButton";
 import { getCookie } from "../utils/cookie";
 
 const Register = () => {
@@ -66,9 +66,7 @@ const Register = () => {
   return (
     <div>
       <header className="header">
-        <a href="/">
-          <img className="search-bar-back" src={back} alt="뒤로가기" />
-        </a>
+        <BackButton navigate={navigate} />
         <h2>새로운 인물 등록</h2>
       </header>
 

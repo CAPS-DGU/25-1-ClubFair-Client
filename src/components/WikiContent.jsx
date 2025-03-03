@@ -15,6 +15,7 @@ export default function WikiContent({ post }) {
         <p> {post.college} </p>
         <p> {post.department} </p>
         <p> {post.entranceYear}학번</p>
+        <hr />
         <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
           {/* {description_markdown} */}
           {post.content}
