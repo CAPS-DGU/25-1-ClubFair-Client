@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import axios from "axios";
+import { getCookie } from "../utils/cookie";
 
 const usePostStore = create((set) => ({
   post: {
@@ -26,6 +27,30 @@ const usePostStore = create((set) => ({
       set({ post: result, loading: false });
     } catch (error) {
       set({ error, loading: false });
+    }
+  },
+  createPost: async (post) => {
+    set({ loading: true, error: null });
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/wiki`,
+        post,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${getCookie("access_token")}`,
+          },
+        }
+      );
+      const { data } = response;
+      const { result } = data;
+      console.log(result);
+
+      set({ loading: false });
+      return { result };
+    } catch (error) {
+      set({ error, loading: false });
+      return { error };
     }
   },
 
