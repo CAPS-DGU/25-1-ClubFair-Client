@@ -12,8 +12,8 @@ const Register = () => {
   const [formData, setFormData] = useState({
     name: "",
     studentNumber: "25",
-    department: "",
-    major: "",
+    department: "첨단융합대학",
+    major: "컴퓨터공학전공",
     content: "",
     author: "",
   });
