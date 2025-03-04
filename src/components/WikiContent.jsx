@@ -7,6 +7,19 @@ import { Link, useNavigate } from "react-router-dom";
 import { getCookie } from "../utils/cookie";
 
 export default function WikiContent({ post }) {
+  const utcToKST = (utcString) => {
+    const date = new Date(utcString);
+    return date.toLocaleString("ko-KR", {
+      timeZone: "Asia/Seoul",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false
+    }).replace(/\. /g, "-").slice(0, -3);
+  };
+
   const { deletePost } = usePostStore();
   const navigate = useNavigate();
   const notLogin = getCookie("access_token") === undefined;
@@ -41,7 +54,7 @@ export default function WikiContent({ post }) {
 
       <div className="wiki-markdown">
         <p>
-          &quot;{post.writer}&quot;이(가) {post.modifiedAt.slice(0, 16)}에
+          &quot;{post.writer}&quot;이(가) {utcToKST(post.modifiedAt)}에
           수정함
         </p>
         <p>
