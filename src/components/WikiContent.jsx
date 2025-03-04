@@ -9,22 +9,13 @@ import { getCookie } from "../utils/cookie";
 export default function WikiContent({ post }) {
 
   const utcToKST = (utcString) => {
-    const safeUtcString = utcString.split(".")[0] + "Z"; // 밀리초 제거
-
-    const date = new Date(safeUtcString);
-    if (isNaN(date.getTime())) {
-      throw new Error("Invalid date format");
-    }
-
+    const date = new Date(utcString);
+    console.log(date);
     date.setHours(date.getHours() + 9);
-
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
-    const hours = String(date.getHours()).padStart(2, "0");
-    const minutes = String(date.getMinutes()).padStart(2, "0");
-
-    return `${year}-${month}-${day} ${hours}:${minutes}`;
+    console.log(date);
+    const res = date.toISOString().slice(0, 16).replace("T", " ");
+    console.log(res);
+    return res;
   };
 
   const { deletePost } = usePostStore();
