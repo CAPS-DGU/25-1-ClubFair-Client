@@ -4,6 +4,7 @@ import "./EditForm.css";
 import { useParams, useNavigate } from "react-router-dom";
 import usePostStore from "../stores/PostStore";
 import BackButton from "../components/BackButton";
+import { EventTrigger } from "../utils/gatriggers";
 
 const EditForm = () => {
   const { id } = useParams();
@@ -56,6 +57,7 @@ const EditForm = () => {
 
   const handleSubmit = async () => {
     if (isFormComplete) {
+      EventTrigger("edit", "wiki", formData.name, 1);
       const response = await updatePost(id, {
         name: formData.name,
         entranceYear: formData.studentNumber,

@@ -151,11 +151,11 @@ function BoothMobileView({ recentPeople, setRecentPeople }) {
           onClick={() => (window.location.href = "/register-form")}
         >
           <p>위키 추가하기</p>
-          {/* <img */}
-          {/*   src="/assets/add-wiki.svg" */}
-          {/*   alt="add wiki" */}
-          {/*   className="wiki-icon" */}
-          {/* /> */}
+          <img
+            src="../assets/wiki-add.svg"
+            alt="add wiki"
+            className="wiki-icon"
+          />
         </button>
       </div>
 
