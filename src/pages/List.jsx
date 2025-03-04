@@ -86,7 +86,7 @@ export default function List() {
             )}
           </select>
         </div>
-        <div className="student-list">
+        <div className="student-list" >
           <h3 className="student">인물</h3>
           {posts.length > 0 ? (
             posts.map((item, index) => (
