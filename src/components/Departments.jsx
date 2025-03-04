@@ -72,7 +72,6 @@ const departments = {
   ],
   열린전공학부: ["열린전공학부"],
 };
-export default departments;
 
 const optionDepartments = Object.fromEntries(
   Object.entries(departments).map(([college, majors]) => [
@@ -81,4 +80,4 @@ const optionDepartments = Object.fromEntries(
   ])
 );
 
-export { optionDepartments };
+export default optionDepartments;

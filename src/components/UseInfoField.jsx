@@ -1,9 +1,10 @@
 import "./UseInfoField.css";
-import { opeionDepartment as departments } from "./Departments";
+import optionDepartment from "./Departments";
 
 const UserInfoFields = ({ formData, handleChange }) => {
-  const selectedDepartment = formData.department || Object.keys(departments)[0];
-  const majorOptions = departments[selectedDepartment] || [];
+  const selectedDepartment =
+    formData.department || Object.keys(optionDepartment)[0];
+  const majorOptions = optionDepartment[selectedDepartment] || [];
 
   return (
     <div>
@@ -46,7 +47,7 @@ const UserInfoFields = ({ formData, handleChange }) => {
           value={formData.department}
           onChange={handleChange}
         >
-          {Object.keys(departments).map((dept) => (
+          {Object.keys(optionDepartment).map((dept) => (
             <option key={dept} value={dept}>
               {dept}
             </option>
