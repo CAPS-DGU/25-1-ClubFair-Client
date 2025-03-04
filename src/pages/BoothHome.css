@@ -1,6 +1,3 @@
-/*부스전용*/
-@media screen and (max-width: 768px) {
-    
     .booth-container {
       display: flex;
       flex-direction: column;
@@ -219,7 +216,3 @@
       height: 70%;
       border-radius: 50%;
     }
-    
-   
-  }
-  
