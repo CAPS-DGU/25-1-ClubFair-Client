@@ -28,13 +28,11 @@ export default function BoothHome() {
     };
   }, []);
 
-  return isMobile ? (
+  return (
     <BoothMobileView
       recentPeople={recentPeople}
       setRecentPeople={setRecentPeople}
     />
-  ) : (
-    <Home />
   );
 }
 
