@@ -77,7 +77,7 @@ function PcView() {
       <footer className="home-footer">
         <img className="home-logo" src={logo} alt="caps-logo" />
         <p className="home-email">
-          <strong>대표 이메일</strong> caps@test.com
+          <strong>대표 인스타그램</strong> @caps_dongguk
         </p>
         <strong className="home-address">
           서울특별시 중구 필동로 1길30 원흥관 E256 캡방
