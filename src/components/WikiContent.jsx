@@ -9,6 +9,9 @@ import { getCookie } from "../utils/cookie";
 export default function WikiContent({ post }) {
 
   const utcToKST = (utcString) => {
+    if (utcString === undefined || utcString === "") {
+      return "";
+    }
     const date = new Date(utcString);
     console.log(date);
     date.setHours(date.getHours() + 9);
