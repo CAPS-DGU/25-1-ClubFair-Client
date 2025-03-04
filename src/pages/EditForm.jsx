@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import CommonForm from "/src/components/CommonForm";
 import "./EditForm.css";
-import back from "/src/assets/back.svg";
 import { useParams, useNavigate } from "react-router-dom";
 import usePostStore from "../stores/PostStore";
+import BackButton from "../components/BackButton";
 
 const EditForm = () => {
   const { id } = useParams();
@@ -75,9 +75,7 @@ const EditForm = () => {
   return (
     <div>
       <header className="header">
-        <a href="/">
-          <img className="search-bar-back" src={back} alt="뒤로가기" />
-        </a>
+        <BackButton navigate={navigate} />
         <h2>{loading ? "위키 수정" : `${formData.name} 위키 수정`}</h2>{" "}
         {/* ✅ 이름이 나오도록 설정 */}
       </header>
