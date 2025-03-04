@@ -126,7 +126,7 @@
       font-weight: bold;
       border: none;
       width: 100%;
-      padding: 20px;
+      /*padding: 20px;*/
       cursor: pointer;
     }
     .booth-add-wiki-btn p{
