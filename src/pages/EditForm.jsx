@@ -20,19 +20,19 @@ const EditForm = () => {
   });
 
   useEffect(() => {
-    const fetchAndSet = async (id) => {
-      await fetchPost(id);
-      setFormData({
-        name: post.name,
-        studentNumber: post.entranceYear,
-        department: post.college,
-        major: post.department,
-        content: post.content,
-        author: post.writer,
-      });
-    };
-    fetchAndSet(id);
-  }, []);
+    fetchPost(id);
+  }, [id]);
+
+  useEffect(() => {
+    setFormData({
+      name: post.name,
+      studentNumber: post.entranceYear,
+      department: post.college,
+      major: post.department,
+      content: post.content,
+      author: post.writer,
+    });
+  }, [post]);
 
   if (loading) {
     return <div>Loading...</div>;
