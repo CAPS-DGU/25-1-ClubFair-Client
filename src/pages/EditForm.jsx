@@ -31,7 +31,11 @@ const EditForm = () => {
       });
     };
     fetchAndSet(id);
-  }, [id]);
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   const isFormComplete =
     formData.name.trim() !== "" &&

@@ -53,7 +53,12 @@ export default function SearchBar({ value, onChange }) {
         <img width={24} src={SearchIcon} alt="검색" />
       </button>
 
-      <Link className="search-bar-right-botton" to="/random" key={location.key}>
+      <Link
+        reloadDocument
+        className="search-bar-right-botton"
+        to="/random"
+        key={location.key}
+      >
         <img width={24} src={Random} alt="랜덤" />
       </Link>
     </div>
