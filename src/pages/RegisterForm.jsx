@@ -5,6 +5,7 @@ import usePostStore from "../stores/PostStore";
 import { useNavigate } from "react-router-dom";
 import BackButton from "../components/BackButton";
 import { getCookie } from "../utils/cookie";
+import { EventTrigger } from "../utils/gatriggers";
 
 const Register = () => {
   const { loading, createPost } = usePostStore();
@@ -52,6 +53,8 @@ const Register = () => {
       content: formData.content,
       writer: formData.author,
     };
+
+    EventTrigger("create", "wiki", post.name, 1);
 
     const { error } = await createPost(post);
 

@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import CommonForm from "/src/components/CommonForm";
 import "./EditForm.css";
-import back from "/src/assets/back.svg";
 import { useParams, useNavigate } from "react-router-dom";
 import usePostStore from "../stores/PostStore";
+import BackButton from "../components/BackButton";
+import { EventTrigger } from "../utils/gatriggers";
 
 const EditForm = () => {
   const { id } = useParams();
@@ -20,19 +21,19 @@ const EditForm = () => {
   });
 
   useEffect(() => {
-    const fetchAndSet = async (id) => {
-      await fetchPost(id);
-      setFormData({
-        name: post.name,
-        studentNumber: post.entranceYear,
-        department: post.college,
-        major: post.department,
-        content: post.content,
-        author: post.writer,
-      });
-    };
-    fetchAndSet(id);
-  }, []);
+    fetchPost(id);
+  }, [id]);
+
+  useEffect(() => {
+    setFormData({
+      name: post.name,
+      studentNumber: post.entranceYear,
+      department: post.college,
+      major: post.department,
+      content: post.content,
+      author: post.writer,
+    });
+  }, [post]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -56,6 +57,7 @@ const EditForm = () => {
 
   const handleSubmit = async () => {
     if (isFormComplete) {
+      EventTrigger("edit", "wiki", formData.name, 1);
       const response = await updatePost(id, {
         name: formData.name,
         entranceYear: formData.studentNumber,
@@ -75,9 +77,7 @@ const EditForm = () => {
   return (
     <div>
       <header className="header">
-        <a href="/">
-          <img className="search-bar-back" src={back} alt="뒤로가기" />
-        </a>
+        <BackButton navigate={navigate} />
         <h2>{loading ? "위키 수정" : `${formData.name} 위키 수정`}</h2>{" "}
         {/* ✅ 이름이 나오도록 설정 */}
       </header>

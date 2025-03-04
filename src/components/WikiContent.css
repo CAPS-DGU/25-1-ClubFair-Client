@@ -63,3 +63,10 @@
   background-color: #fafafa;
 }
 
+.wiki-content-edit-button {
+  padding: .6em 1.2em;
+}
+
+.wiki-content-delete-button {
+  color: red;
+}

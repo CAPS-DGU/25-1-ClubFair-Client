@@ -49,8 +49,24 @@ export default function Search() {
 
       {posts.length === 0 && !errorMessage ? (
         <div>
-          <p>검색 결과가 없습니다.</p>
-          <Link to="/register-form">새로운 인물 등록하기↗</Link>
+          <p
+            style={{
+              marginTop: "200px",
+            }}
+          >
+            검색 결과가 없습니다.
+          </p>
+          <Link
+            style={{
+              backgroundColor: "#373737",
+              padding: "10px 20px",
+              color: "white",
+              borderRadius: "15px",
+            }}
+            to="/register-form"
+          >
+            새로운 인물 등록하기↗
+          </Link>
         </div>
       ) : (
         <div className="search-card-container">
