@@ -13,8 +13,11 @@ export default function Wiki() {
 
   useEffect(() => {
     fetchPost(id);
-    setSearch(post.name);
   }, [id]);
+
+  useEffect(() => {
+    setSearch(post.name);
+  }, [post]);
 
   if (loading) {
     return <div>Loading...</div>;
