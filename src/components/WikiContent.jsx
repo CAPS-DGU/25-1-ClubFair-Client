@@ -7,12 +7,16 @@ import { Link, useNavigate } from "react-router-dom";
 import { getCookie } from "../utils/cookie";
 
 export default function WikiContent({ post }) {
+
   const utcToKST = (utcString) => {
-    const date = new Date(utcString);
+    const safeUtcString = utcString.slice(0, 23) + "Z";
+    const date = new Date(safeUtcString);
+    if (isNaN(date)) {
+      throw new Error("Invalid date format");
+    }
     date.setHours(date.getHours() + 9);
     return date.toISOString().slice(0, 16).replace("T", " ");
   };
-
 
   const { deletePost } = usePostStore();
   const navigate = useNavigate();
