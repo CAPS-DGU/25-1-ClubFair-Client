@@ -56,17 +56,6 @@ export default function Search() {
           >
             검색 결과가 없습니다.
           </p>
-          <Link
-            style={{
-              backgroundColor: "#373737",
-              padding: "10px 20px",
-              color: "white",
-              borderRadius: "15px",
-            }}
-            to="/register-form"
-          >
-            새로운 인물 등록하기↗
-          </Link>
         </div>
       ) : (
         <div className="search-card-container">
@@ -82,6 +71,17 @@ export default function Search() {
           ))}
         </div>
       )}
+      <Link
+        style={{
+          backgroundColor: "#373737",
+          padding: "10px 20px",
+          color: "white",
+          borderRadius: "15px",
+        }}
+        to="/register-form"
+      >
+        새로운 인물 등록하기↗
+      </Link>
     </div>
   );
 }
