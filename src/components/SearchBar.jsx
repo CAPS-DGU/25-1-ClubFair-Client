@@ -1,4 +1,9 @@
-import { useNavigate, Link, useSearchParams } from "react-router-dom"; // ✅ useSearchParams 추가
+import {
+  useNavigate,
+  Link,
+  useSearchParams,
+  useLocation,
+} from "react-router-dom"; // ✅ useSearchParams 추가
 import "./SearchBar.css";
 import BackButton from "./BackButton";
 import Delete from "../assets/delete.svg";
@@ -9,9 +14,11 @@ export default function SearchBar({ value, onChange }) {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get("name") || ""; // ✅ 기존 검색어 유지
+  const location = useLocation();
 
   const handleSearch = () => {
     if (!value.trim()) return;
+    console.log(searchQuery);
     navigate(`/search?name=${encodeURIComponent(value)}`); // ✅ 항상 `?name=검색어` 유지
   };
 
@@ -46,7 +53,7 @@ export default function SearchBar({ value, onChange }) {
         <img width={24} src={SearchIcon} alt="검색" />
       </button>
 
-      <Link className="search-bar-right-botton" to="/random">
+      <Link className="search-bar-right-botton" to="/random" key={location.key}>
         <img width={24} src={Random} alt="랜덤" />
       </Link>
     </div>

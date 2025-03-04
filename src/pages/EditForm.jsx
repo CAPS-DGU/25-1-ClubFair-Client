@@ -35,8 +35,8 @@ const EditForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     studentNumber: "25",
-    department: "첨단융합대학",
-    major: "시스템반도체학부",
+    department: "",
+    major: "",
     content: "",
     author: "",
   });

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -60,6 +60,7 @@ export default function Login() {
         </button>
       </form>
       <p>문서의 등록, 수정은 부스에서만 가능합니다.</p>
+      <Link to="/">홈으로</Link>
     </div>
   );
 }
