@@ -13,12 +13,15 @@ export default function WikiContent({ post }) {
       return "";
     }
     const date = new Date(utcString);
-    console.log(date);
     date.setHours(date.getHours() + 9);
-    console.log(date);
-    const res = date.toISOString().slice(0, 16).replace("T", " ");
-    console.log(res);
-    return res;
+
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+
+    return `${year}-${month}-${day} ${hours}:${minutes}`;
   };
 
   const { deletePost } = usePostStore();
@@ -55,7 +58,7 @@ export default function WikiContent({ post }) {
 
       <div className="wiki-markdown">
         <p>
-          &quot;{post.writer}&quot;이(가) {utcToKST(post.modifiedAt)}에
+          &quot;{post.writer}&quot;님이 {utcToKST(post.modifiedAt)}에
           수정함
         </p>
         <p>

@@ -72,7 +72,7 @@ export default function List() {
               setDepartment(e.target.value);
             }}
           >
-            <option value="">학과 선택</option>
+            {/* <option value="">학과 선택</option> */}
             {selectedCollege && optionDepartments?.[selectedCollege]?.length > 0 ? (
               optionDepartments[selectedCollege].map((sub) => (
                 <option key={sub} value={sub}>
