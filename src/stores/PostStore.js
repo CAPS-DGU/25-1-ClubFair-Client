@@ -89,6 +89,27 @@ const usePostStore = create((set) => ({
       return { error };
     }
   },
+  deletePost: async (id) => {
+    set({ loading: true, error: null });
+    try {
+      const response = await axios.delete(
+        `${import.meta.env.VITE_API_URL}/api/wiki/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${getCookie("access_token")}`,
+          },
+        }
+      );
+      const { data } = response;
+      const { result } = data;
+
+      set({ loading: false });
+      return { result };
+    } catch (error) {
+      set({ error, loading: false });
+      return { error };
+    }
+  },
 
   // createPost, updatePost 등 다른 메서드 추가 하면 됩니다.
 }));
