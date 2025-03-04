@@ -5,32 +5,26 @@ import WikiCard from "../components/WikiCard.jsx";
 import { useNavigate } from "react-router-dom";
 import Departments from "../components/Departments.jsx";
 import BackButton from "../components/BackButton.jsx";
+import usePostListStore from "../stores/PostListStore.js"; // Zustand store import
 
 export default function List() {
   const [openDepts, setOpenDepts] = useState({});
   const [selectedCollege, setSelectedCollege] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const navigate = useNavigate();
-  const wikiData = [
-    {
-      title: "김민섭",
-      enteredIn: "19",
-      college: "첨단융합대학",
-      department: "멀티미디어소프트웨어공학전공",
-    },
-    {
-      title: "김민섭",
-      enteredIn: "20",
-      college: "첨단융합대학",
-      department: "멀티미디어소프트웨어공학전공",
-    },
-    {
-      title: "김민섭",
-      enteredIn: "22",
-      college: "첨단융합대학",
-      department: "멀티미디어소프트웨어공학전공",
-    },
-  ];
+
+  // Zustand 상태 가져오기
+  const { posts, fetchPosts } = usePostListStore();
+
+  // 컴포넌트가 처음 렌더링될 때 API 호출
+  useEffect(() => {
+    fetchPosts();
+  }, []);
+
+  // posts 데이터 확인 (디버깅용)
+  useEffect(() => {
+    console.log("📌 posts 데이터:", posts);
+  }, [posts]);
 
   // 화면 크기 감지 (리사이즈 시 업데이트)
   useEffect(() => {
@@ -47,6 +41,7 @@ export default function List() {
       [dept]: !prev[dept],
     }));
   };
+
   const handleCollegeChange = (event) => {
     const college = event.target.value;
     setSelectedCollege(college);
@@ -55,42 +50,42 @@ export default function List() {
 
   return (
     <div>
-      {!isMobile && <HeaderBar></HeaderBar>}
 
-      {isMobile ? (
-        <div className="mobile-container">
-          <header className="Header">
-            <div className="Header-container">
-              <BackButton navigate={navigate} />
-              <div className="list">리스트</div>
-            </div>
-            <hr></hr>
-          </header>
-          <div className="dropdowns">
-            <label className="college">단과대 </label>
-            <select onChange={handleCollegeChange} value={selectedCollege}>
-              <option value="">단과대학 선택</option>
-              {Object.keys(Departments).map((dept) => (
-                <option key={dept} value={dept}>
-                  {dept}
-                </option>
-              ))}
-            </select>
-            <br></br>
-            <br></br>
+
+       <div className="mobile-container">
+         <header className="Header">
+           <div className="Header-container">
+             <BackButton navigate={navigate} />
+             <div className="list">리스트</div>
+           </div>
+           <hr />
+         </header>
+         <div className="dropdowns">
+           <label className="college">단과대 </label>
+           <select onChange={handleCollegeChange} value={selectedCollege}>
+             <option value="">단과대학 선택</option>
+             {Departments &&
+               Object.keys(Departments).map((dept) => (
+                 <option key={dept} value={dept}>
+                   {dept}
+                 </option>
+               ))}
+           </select>
+            <br />
+            <br />
             <label className="college">학과 </label>
 
             <select
               value={openDepts[selectedCollege] || ""}
               onChange={(e) =>
-                setOpenDepts({
-                  ...openDepts,
+                setOpenDepts((prev) => ({
+                  ...prev,
                   [selectedCollege]: e.target.value,
-                })
+                }))
               }
             >
               <option value="">학과 선택</option>
-              {selectedCollege && Departments[selectedCollege].length > 0 ? (
+              {selectedCollege && Departments?.[selectedCollege]?.length > 0 ? (
                 Departments[selectedCollege].map((sub) => (
                   <option key={sub} value={sub}>
                     {sub}
@@ -105,68 +100,15 @@ export default function List() {
           </div>
           <div className="student-list">
             <h3 className="student">인물</h3>
-            {wikiData.map((item, index) => (
-              <WikiCard className="wikicard" key={index} {...item}></WikiCard>
-            ))}
+            {posts.length > 0 ? (
+              posts.map((item, index) => (
+                <WikiCard className="wikicard" key={index} {...item} />
+              ))
+            ) : (
+              <p>등록된 인물이 없습니다.</p>
+            )}
           </div>
         </div>
-      ) : (
-        <div className="container">
-          <h2 className="title">캡스위키에 오신 걸 환영합니다!</h2>
-          <div className="content">
-            <div className="sidebar">
-              <h3>학과</h3>
-              <ul>
-                {Object.keys(Departments).map((dept) => (
-                  <li key={dept}>
-                    <button
-                      className="dept-btn"
-                      onClick={() => toggleDepartment(dept)}
-                    >
-                      {dept}
-                    </button>
-                    {openDepts[dept] && (
-                      <ul className="sub-list">
-                        {Departments[dept].length > 0 ? (
-                          Departments[dept].map((sub) => (
-                            <li key={sub}>{sub}</li>
-                          ))
-                        ) : (
-                          <li className="empty">등록된 학과 없음</li>
-                        )}
-                      </ul>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* 메인 콘텐츠 (박스 그리드) */}
-            <div className="grid">
-              <div className="box blue" onClick={() => navigate("/wiki")}>
-                방지원
-                <br />
-                컴퓨터공학전공 23학번
-              </div>
-              <div className="box green">
-                방지원
-                <br />
-                국어국문학과 23학번
-              </div>
-              <div className="box empty"></div>
-              <div className="box empty"></div>
-              <div className="box empty"></div>
-              <div className="box empty"></div>
-              <div className="box empty"></div>
-              <div className="box empty"></div>
-              <div className="box empty"></div>
-              <div className="box empty"></div>
-              <div className="box empty"></div>
-              <div className="box empty"></div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
