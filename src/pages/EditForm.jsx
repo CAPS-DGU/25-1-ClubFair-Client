@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import CommonForm from "/src/components/CommonForm";
 import "./EditForm.css";
 import back from "/src/assets/back.svg";
-import { useParams, navigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import usePostStore from "../stores/PostStore";
 
 const EditForm = () => {
   const { id } = useParams();
   const { post, loading, fetchPost, updatePost } = usePostStore();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
