@@ -2,35 +2,12 @@ import { useState, useEffect } from "react";
 import CommonForm from "/src/components/CommonForm";
 import "./EditForm.css";
 import back from "/src/assets/back.svg";
-
-const fetchDocumentData = async (id) => {
-  const mockData = {
-    123: {
-      id: "123",
-      name: "홍길동",
-      studentNumber: "24",
-      department: "공과대학",
-      major: "전자전기공학부",
-      content: "이 학생은 매우 우수합니다.",
-      author: "관리자",
-    },
-  };
-
-  return new Promise((resolve) =>
-    setTimeout(() => resolve(mockData[id] || null), 1000)
-  );
-};
+import { useParams, navigate } from "react-router-dom";
+import usePostStore from "../stores/PostStore";
 
 const EditForm = () => {
-  let queryParams;
-  try {
-    queryParams = new URLSearchParams(window.location.search);
-  } catch (error) {
-    console.error(error);
-    queryParams = null;
-  }
-
-  const id = queryParams ? queryParams.get("id") : null;
+  const { id } = useParams();
+  const { post, loading, fetchPost, updatePost } = usePostStore();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -41,20 +18,19 @@ const EditForm = () => {
     author: "",
   });
 
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    const loadData = async () => {
-      if (id) {
-        const data = await fetchDocumentData(id);
-        if (data) {
-          setFormData(data);
-        }
-      }
-      setLoading(false);
+    const fetchAndSet = async (id) => {
+      await fetchPost(id);
+      setFormData({
+        name: post.name,
+        studentNumber: post.entranceYear,
+        department: post.college,
+        major: post.department,
+        content: post.content,
+        author: post.writer,
+      });
     };
-
-    loadData();
+    fetchAndSet(id);
   }, [id]);
 
   const isFormComplete =
@@ -75,9 +51,19 @@ const EditForm = () => {
 
   const handleSubmit = async () => {
     if (isFormComplete) {
-      console.log("수정된 데이터:", formData);
-      alert("수정이 완료되었습니다.");
-      window.history.back();
+      const response = await updatePost(id, {
+        name: formData.name,
+        entranceYear: formData.studentNumber,
+        department: formData.major,
+        content: formData.content,
+        writer: formData.author,
+      });
+      if (response.error) {
+        alert(`Error: ${response.error.message}`);
+      } else {
+        alert("수정이 완료되었습니다.");
+        navigate(`/wiki/${id}`);
+      }
     }
   };
 

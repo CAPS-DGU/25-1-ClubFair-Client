@@ -66,6 +66,29 @@ const usePostStore = create((set) => ({
       return { error };
     }
   },
+  updatePost: async (id, post) => {
+    set({ loading: true, error: null });
+    try {
+      const response = await axios.patch(
+        `${import.meta.env.VITE_API_URL}/api/wiki/${id}`,
+        post,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${getCookie("access_token")}`,
+          },
+        }
+      );
+      const { data } = response;
+      const { result } = data;
+
+      set({ loading: false });
+      return { result };
+    } catch (error) {
+      set({ error, loading: false });
+      return { error };
+    }
+  },
 
   // createPost, updatePost 등 다른 메서드 추가 하면 됩니다.
 }));
