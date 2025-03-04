@@ -9,16 +9,10 @@ import { getCookie } from "../utils/cookie";
 export default function WikiContent({ post }) {
   const utcToKST = (utcString) => {
     const date = new Date(utcString);
-    return date.toLocaleString("ko-KR", {
-      timeZone: "Asia/Seoul",
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: false
-    }).replace(/\. /g, "-").slice(0, -3);
+    date.setHours(date.getHours() + 9);
+    return date.toISOString().slice(0, 16).replace("T", " ");
   };
+
 
   const { deletePost } = usePostStore();
   const navigate = useNavigate();
